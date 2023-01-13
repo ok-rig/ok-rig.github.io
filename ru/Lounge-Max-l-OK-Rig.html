@@ -5,12 +5,110 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>Lounge Max l OK Rig</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Lounge-Max-l-OK-Rig.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="../nicepage.css" media="screen">
+<link rel="stylesheet" href="../Lounge-Max-l-OK-Rig.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
     <style> /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
+        <div class="popup" onclick="openPopUp('puLedIndicators')" >
+        <span class="popuptext" id="puLedIndicators" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > Tricolored individual LED Indicators
+        </b >
+        Each FootSwitch has own LED indicator
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puPowerButton')" >
+        <span class="popuptext" id="puPowerButton" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > Power button with LED indicator
+        </b >
+        Button to power up controller from battery source. LED indicator fades if the device is turned ON and blinks if any MIDI data patthrough the interface
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puHousing')" >
+        <span class="popuptext" id="puHousing" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > Full-Aluminium Casing
+        </b >
+        Shell is made of solid aluminium material, designed for long-term use even in rough conditions
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puSockets')" >
+        <span class="popuptext" id="puSockets" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > 4 x 1/4" Expression/Volume pedal inputs
+        </b >
+        Simply plug your favourite Volume and Expression pedals. 2 x 1/4" mono(2-pin) inputs to use with Volume pedals and Stereo pedals, and 2 x 1/4" stereo(3-pin) to use with Expression pedals only. Mono-type sockets needs to be calibrated on pedal swap on the first use, not necessary after power off.
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puUSBCport')" >
+        <span class="popuptext" id="puUSBCport" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > USB-C Port
+        </b >
+        Universal USB-C Port to charge, power, pass USB-MIDI data, act as host device
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puMIDIIN')" >
+        <span class="popuptext" id="puMIDIIN" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > 2 x 5-pin MIDI In
+        </b >
+        Legacy 5-pin inputs to receive MIDI data. Received midi messages can be reforwarded to other-type interfaces
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puMIDIOUT')" >
+        <span class="popuptext" id="puMIDIOUT" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > 2 x 5-pin MIDI Out
+        </b >
+        Legacy 5-pin outputs to send MIDI data to another MIDI-receiver devices, reforward MIDI data from other-type interfaces
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puBTindicator')" >
+        <span class="popuptext" id="puBTindicator" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > Bluetooth indicator
+        </b >
+        Bluetooth LED indicator shows the Bluetooth state, if controller in Bluetooth LowEnergy mode, Classic Bluetooth mode, or Bluetooth is turned off. LED will blink if any MIDI message received or send via Bluetooth interface
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puFootSwitches')" >
+        <span class="popuptext" id="puFootSwitches" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > 8 x Footswitches
+        </b >
+        8x High quality FootSwitches, can be used to send any type of MIDI messages, or operate controller itself. Send up to 20 different messages with one trigger in one moment of time. Assign MIDI messages via Application. Colored aluminium toppers are easily swappable for your customization
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puBatIndicator')" >
+        <span class="popuptext" id="puBatIndicator" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > Battery level indicator with function button
+        </b >
+        Check your battery level and toggle Bluetooth modes with function "Test" button. Tap button to show current battery level or wake up bluetooth if it was in sleep state, Press&Hold for 5 seconds to toggle BLE/Classic Mode, Press + Press&Hold for 5 seconds to turn off Bluetooth
+        </p >
+        </span >
+        </div >
+        <div class="popup" onclick="openPopUp('puKnobs')" >
+        <span class="popuptext" id="puKnobs" >
+        <p style="font-weight:normal" class="popupAllText" >
+        <b class="popupTitleText" > 20 x Control Knobs
+        </b >
+        20x Knobs to send any type of MIDI messages.Assign MIDI messages via Application. Colored plastic toppers are easily swappable for your customization
+        </p >
+        </span >
+        </div >
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// </style>
     <script> window.onload = function () {
 			
@@ -163,9 +261,9 @@
             timeractive = false;
         }</script>
     
-    <link rel="icon" href="images/favicon.png">
-    <link id="u-theme-google-font" rel="stylesheet" href="fonts.css">
-    <link id="u-page-google-font" rel="stylesheet" href="Lounge-Max-l-OK-Rig-fonts.css">
+    <link rel="icon" href="../images/favicon.png">
+    <link id="u-theme-google-font" rel="stylesheet" href="../fonts.css">
+    <link id="u-page-google-font" rel="stylesheet" href="../Lounge-Max-l-OK-Rig-fonts.css">
     
     
     
@@ -177,7 +275,7 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "OKrig",
-		"logo": "images/okrigblue21.png"
+		"logo": "../images/okrigblue21.png"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Lounge Max l OK Rig">
@@ -185,7 +283,7 @@
     <meta property="og:type" content="website">
   <noscript>
   <!-- Прелоадер -->
-</noscript></head><body class="u-body u-xl-mode" data-lang="en"><div class="preloader">
+</noscript></head><body class="u-body u-xl-mode" data-lang="ru"><div class="preloader">
   <div class="preloader__row">
     <div class="preloader__item"></div>
     <div class="preloader__item"></div>
@@ -196,7 +294,15 @@
 
 	
 
-
+  <script>
+    window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 500);
+    }
+  </script>
   <header class=" u-clearfix u-header u-section-row-container" id="sec-7048" style=""><div class="u-section-rows">
         <div class="u-black u-clearfix u-section-row" id="sec-cbba" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
           
@@ -205,8 +311,8 @@
           
           
           <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <a href="OK-Rig-l-MIDI-Controllers.html" class="u-image u-logo u-image-1" data-image-width="588" data-image-height="328" title="PRODUCTS">
-              <img src="images/okrigblue21.png" class="u-logo-image u-logo-image-1">
+            <a href="../ru/OK-Rig-l-MIDI-Controllers.html" class="u-image u-logo u-image-1" data-image-width="588" data-image-height="328" title="PRODUCTS">
+              <img src="../images/okrigblue21.png" class="u-logo-image u-logo-image-1">
             </a>
           </div>
         </div>
@@ -214,33 +320,29 @@
           <div class="u-clearfix u-sheet u-sheet-2">
             <nav class="u-align-center u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
               <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-                <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#fsdfsdffsd" data-lang-ru="{&quot;content&quot;:&quot;<svg class=\&quot;u-svg-link\&quot; viewBox=\&quot;0 0 24 24\&quot;><use xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xlink:href=\&quot;#menu-hamburger\&quot;></use></svg><svg class=\&quot;u-svg-content\&quot; version=\&quot;1.1\&quot; id=\&quot;menu-hamburger\&quot; viewBox=\&quot;0 0 16 16\&quot; x=\&quot;0px\&quot; y=\&quot;0px\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;>    <g>        <rect y=\&quot;1\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;7\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>        <rect y=\&quot;13\&quot; width=\&quot;16\&quot; height=\&quot;2\&quot;></rect>    </g></svg>&quot;,&quot;href&quot;:&quot;#&quot;}">
-                  <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-                  <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-                </a>
+                <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#"><svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg><svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">    <g>        <rect y="1" width="16" height="2"></rect>        <rect y="7" width="16" height="2"></rect>        <rect y="13" width="16" height="2"></rect>    </g></svg></a>
               </div>
               <div class="u-custom-menu u-nav-container">
-                <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" href="OK-Rig-l-MIDI-Controllers.html" data-lang-ru="{&quot;content&quot;:&quot;Home&quot;,&quot;href&quot;:&quot;OK-Rig-l-MIDI-Controllers.html&quot;}" style="padding: 18px 72px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" data-lang-ru="{&quot;content&quot;:&quot;Devices&quot;}" style="padding: 18px 72px;">Devices</a><div class="u-nav-popup"><ul class="u-h-spacing-50 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-black u-button-style u-hover-grey-70 u-nav-link" href="Lounge-Max-l-OK-Rig.html" data-lang-ru="{&quot;content&quot;:&quot;OK Lounge MAX&quot;,&quot;href&quot;:&quot;MIDI-Lounge-Max-l-OK-Rig.html&quot;}">OK™ Lounge MAX</a>
+                <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" href="OK-Rig-l-MIDI-Controllers.html" style="padding: 18px 72px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" style="padding: 18px 72px;">Devices</a><div class="u-nav-popup"><ul class="u-h-spacing-50 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-black u-button-style u-hover-grey-70 u-nav-link" href="MIDI-Lounge-Max-l-OK-Rig.html">OK Lounge MAX</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" href="PURCHASE--l-OK-Rig.html" data-lang-ru="{&quot;content&quot;:&quot;Purchase&quot;,&quot;href&quot;:&quot;PURCHASE--l-OK-Rig.html&quot;}" style="padding: 18px 72px;">Purchase</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" href="DOWNLOADS-l-OK-Rig.html" data-lang-ru="{&quot;content&quot;:&quot;Downloads&quot;,&quot;href&quot;:&quot;DOWNLOADS-l-OK-Rig.html&quot;}" style="padding: 18px 72px;">Downloads</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" href="CONTACT--l-OK-Rig.html" data-lang-ru="{&quot;content&quot;:&quot;Contact&quot;,&quot;href&quot;:&quot;CONTACT--l-OK-Rig.html&quot;}" style="padding: 18px 72px;">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" href="PURCHASE--l-OK-Rig.html" style="padding: 18px 72px;">Purchase</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" href="DOWNLOADS-l-OK-Rig.html" style="padding: 18px 72px;">Downloads</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base" href="CONTACT--l-OK-Rig.html" style="padding: 18px 72px;">Contact</a>
 </li></ul>
               </div>
               <div class="u-custom-menu u-nav-container-collapse">
                 <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
                   <div class="u-inner-container-layout u-sidenav-overflow">
                     <div class="u-menu-close"></div>
-                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="OK-Rig-l-MIDI-Controllers.html" data-lang-ru="{&quot;content&quot;:&quot;Home&quot;,&quot;href&quot;:&quot;OK-Rig-l-MIDI-Controllers.html&quot;}">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" data-lang-ru="{&quot;content&quot;:&quot;Devices&quot;}">Devices</a><div class="u-nav-popup"><ul class="u-h-spacing-50 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Lounge-Max-l-OK-Rig.html" data-lang-ru="{&quot;content&quot;:&quot;OK Lounge MAX&quot;,&quot;href&quot;:&quot;MIDI-Lounge-Max-l-OK-Rig.html&quot;}">OK™ Lounge MAX</a>
+                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="OK-Rig-l-MIDI-Controllers.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link">Devices</a><div class="u-nav-popup"><ul class="u-h-spacing-50 u-nav u-unstyled u-v-spacing-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="MIDI-Lounge-Max-l-OK-Rig.html">OK Lounge MAX</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="PURCHASE--l-OK-Rig.html" data-lang-ru="{&quot;content&quot;:&quot;Purchase&quot;,&quot;href&quot;:&quot;PURCHASE--l-OK-Rig.html&quot;}">Purchase</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="DOWNLOADS-l-OK-Rig.html" data-lang-ru="{&quot;content&quot;:&quot;Downloads&quot;,&quot;href&quot;:&quot;DOWNLOADS-l-OK-Rig.html&quot;}">Downloads</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="CONTACT--l-OK-Rig.html" data-lang-ru="{&quot;content&quot;:&quot;Contact&quot;,&quot;href&quot;:&quot;CONTACT--l-OK-Rig.html&quot;}">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="PURCHASE--l-OK-Rig.html">Purchase</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="DOWNLOADS-l-OK-Rig.html">Downloads</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="CONTACT--l-OK-Rig.html">Contact</a>
 </li></ul>
                   </div>
                 </div>
@@ -268,26 +370,26 @@ borders: top right bottom left !important
       </div>
       <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
         <div class="u-container-layout u-container-layout-1">
-          <img class="u-align-center u-image u-image-contain u-image-1" src="images/ok_midi_lounge_max_header2.webp" data-image-width="3573" data-image-height="2782" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0">
+          <img class="u-align-center u-image u-image-contain u-image-1" src="../images/ok_midi_lounge_max_header2.webp" data-image-width="3573" data-image-height="2782" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0">
           <div class="u-container-style u-expanded-width u-group u-palette-1-dark-3 u-group-2">
             <div class="u-container-layout u-container-layout-2">
               <div class="u-align-left u-expanded-width-sm u-expanded-width-xs u-layout-grid u-list u-list-2">
                 <div class="u-repeater u-repeater-2">
                   <div class="u-container-style u-hover-feature u-list-item u-repeater-item u-shape-rectangle u-list-item-1">
                     <div class="u-container-layout u-similar-container u-container-layout-3">
-                      <a href="Lounge-Max-l-OK-Rig.html#View" class="u-align-center-sm u-align-center-xs u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-1"> Overview<br>
+                      <a href="../ru/Lounge-Max-l-OK-Rig.html#View" class="u-align-center-sm u-align-center-xs u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-1"> Overview<br>
                       </a>
                     </div>
                   </div>
                   <div class="u-container-style u-hover-feature u-list-item u-repeater-item u-shape-rectangle u-list-item-2">
                     <div class="u-container-layout u-similar-container u-container-layout-4">
-                      <a href="Lounge-Max-l-OK-Rig.html#sec-e57e" class="u-align-center-sm u-align-center-xs u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-2">Features<br>
+                      <a href="../ru/Lounge-Max-l-OK-Rig.html#sec-e57e" class="u-align-center-sm u-align-center-xs u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-2">Features<br>
                       </a>
                     </div>
                   </div>
                   <div class="u-container-style u-hover-feature u-list-item u-repeater-item u-shape-rectangle u-list-item-3">
                     <div class="u-container-layout u-similar-container u-container-layout-5">
-                      <a href="Lounge-Max-l-OK-Rig.html#sec-4b88" class="u-align-center-sm u-align-center-xs u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-3"> Data &amp; Facts<br>
+                      <a href="../ru/Lounge-Max-l-OK-Rig.html#sec-4b88" class="u-align-center-sm u-align-center-xs u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-3"> Data &amp; Facts<br>
                       </a>
                     </div>
                   </div>
@@ -303,7 +405,7 @@ borders: top right bottom left !important
           <br>Ultimate
         </span>
       </h2>
-      <img class="u-align-center u-image u-image-contain u-image-round u-radius-10 u-image-2" src="images/wordlogo-lines-scale-6_00x-gigapixel.png" alt="" data-image-width="5200" data-image-height="1312" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X" data-animation-out="0" data-animation-delay="2500">
+      <img class="u-align-center u-image u-image-contain u-image-round u-radius-10 u-image-2" src="../images/wordlogo-lines-scale-6_00x-gigapixel.png" alt="" data-image-width="5200" data-image-height="1312" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X" data-animation-out="0" data-animation-delay="2500">
     </section>
     <section class="u-align-center u-clearfix u-white u-section-2" id="sec-55f5">
       <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-sheet-1">
@@ -315,7 +417,7 @@ borders: top right bottom left !important
             <div class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
               <div class="u-repeater u-repeater-1">
                 <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-1" data-animation-name="bounceIn" data-animation-duration="1500" data-animation-direction="Left" data-animation-delay="0" data-animation-out="0">
-                  <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="images/222351-866c0ee5.png" alt=""></span>
+                  <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="../images/222351-866c0ee5.png" alt=""></span>
                     <p class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-titillium-web u-text u-text-3">Universal MIDI Controller</p>
                   </div>
                 </div>
@@ -324,7 +426,7 @@ borders: top right bottom left !important
             <div class="u-align-left-md u-align-left-sm u-align-left-xs u-expanded-width-xs u-list u-list-2">
               <div class="u-repeater u-repeater-2">
                 <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-2" data-animation-name="bounceIn" data-animation-duration="1500" data-animation-direction="" data-animation-delay="3000" data-animation-out="0">
-                  <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-file-icon u-icon u-text-palette-1-base u-icon-2"><img src="images/222351-866c0ee5.png" alt=""></span>
+                  <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-file-icon u-icon u-text-palette-1-base u-icon-2"><img src="../images/222351-866c0ee5.png" alt=""></span>
                     <p class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-titillium-web u-text u-text-4"> Fully Customizable for Your Needs</p>
                   </div>
                 </div>
@@ -333,7 +435,7 @@ borders: top right bottom left !important
             <div class="u-align-right-md u-align-right-sm u-align-right-xs u-expanded-width-xs u-list u-list-3">
               <div class="u-repeater u-repeater-3">
                 <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-3" data-animation-name="bounceIn" data-animation-duration="1500" data-animation-direction="" data-animation-delay="1500" data-animation-out="0">
-                  <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-file-icon u-icon u-text-palette-1-base u-icon-3"><img src="images/222351-866c0ee5.png" alt=""></span>
+                  <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-file-icon u-icon u-text-palette-1-base u-icon-3"><img src="../images/222351-866c0ee5.png" alt=""></span>
                     <p class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-titillium-web u-text u-text-5"> Rich Set of Controls</p>
                   </div>
                 </div>
@@ -342,7 +444,7 @@ borders: top right bottom left !important
             <div class="u-align-right u-expanded-width-xs u-list u-list-4">
               <div class="u-repeater u-repeater-4">
                 <div class="u-align-center u-container-style u-list-item u-repeater-item u-list-item-4" data-animation-name="bounceIn" data-animation-duration="1500" data-animation-direction="" data-animation-out="0" data-animation-delay="4500">
-                  <div class="u-container-layout u-similar-container u-container-layout-5"><span class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-file-icon u-icon u-text-palette-1-base u-icon-4"><img src="images/222351-866c0ee5.png" alt=""></span>
+                  <div class="u-container-layout u-similar-container u-container-layout-5"><span class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-file-icon u-icon u-text-palette-1-base u-icon-4"><img src="../images/222351-866c0ee5.png" alt=""></span>
                     <p class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-titillium-web u-text u-text-6"> Operate and Use Anywhere</p>
                   </div>
                 </div>
@@ -361,7 +463,7 @@ borders: top right bottom left !important
       <div class="u-carousel-inner" role="listbox">
         <div class="skrollable u-active u-black u-carousel-item u-clearfix u-section-3-1">
           <div class="u-clearfix u-sheet u-sheet-1">
-            <img class="u-align-center-xs u-image u-image-contain u-image-default u-image-1" src="images/ok_midi_lounge_max_front1.webp" alt="" data-image-width="5184" data-image-height="2916">
+            <img class="u-align-center-xs u-image u-image-contain u-image-default u-image-1" src="../images/ok_midi_lounge_max_front1.webp" alt="" data-image-width="5184" data-image-height="2916">
             <div class="u-container-style u-group u-preserve-proportions u-group-1">
               <div class="u-container-layout u-container-layout-1">
                 <div class="pointerforbuttons prevslide u-list u-list-1">
@@ -402,7 +504,7 @@ borders: top right bottom left !important
         </div>
         <div class="skrollable u-black u-carousel-item u-clearfix u-section-3-2">
           <div class="u-clearfix u-sheet u-sheet-1">
-            <img class="u-align-center-sm u-align-center-xs u-image u-image-contain u-image-default u-image-1" src="images/ok_midi_lounge_max_rear.webp" alt="" data-image-width="5184" data-image-height="2916">
+            <img class="u-align-center-sm u-align-center-xs u-image u-image-contain u-image-default u-image-1" src="../images/ok_midi_lounge_max_rear.webp" alt="" data-image-width="5184" data-image-height="2916">
             <a href="##slide2Button4" class="pointerforbuttons slide2Button4 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-white u-white u-btn-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="2 x 5-pin MIDI Out">+</a>
             <a href="##slide2Button2" class="pointerforbuttons slide2Button2 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-white u-white u-btn-2" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="USB-C Port">+</a>
             <a href="##slide2Button1" class="pointerforbuttons slide2Button1 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-white u-white u-btn-3" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="4 x 1/4&quot; Expression/Volume pedal inputs">+</a>
@@ -442,7 +544,7 @@ borders: top right bottom left !important
         </div>
         <div class="skrollable u-align-center u-black u-carousel-item u-clearfix u-section-3-3">
           <div class="u-clearfix u-sheet u-sheet-1">
-            <img class="u-absolute-hcenter-lg u-align-center-xs u-expanded-height-lg u-image u-image-contain u-image-default u-image-1" src="images/ok_midi_lounge_max_top.webp" alt="" data-image-width="5184" data-image-height="2916">
+            <img class="u-absolute-hcenter-lg u-align-center-xs u-expanded-height-lg u-image u-image-contain u-image-default u-image-1" src="../images/ok_midi_lounge_max_top.webp" alt="" data-image-width="5184" data-image-height="2916">
             <div class="u-container-style u-group u-preserve-proportions u-group-1">
               <div class="u-container-layout u-container-layout-1">
                 <div class="pointerforbuttons prevslide u-list u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-list-1">
@@ -507,105 +609,7 @@ borders: top right bottom left !important
       
       
       
-          <div class="popup" onclick="openPopUp('puLedIndicators')" >
-        <span class="popuptext" id="puLedIndicators" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > Tricolored individual LED Indicators
-        </b >
-        Each FootSwitch has own LED indicator
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puPowerButton')" >
-        <span class="popuptext" id="puPowerButton" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > Power button with LED indicator
-        </b >
-        Button to power up controller from battery source. LED indicator fades if the device is turned ON and blinks if any MIDI data patthrough the interface
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puHousing')" >
-        <span class="popuptext" id="puHousing" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > Full-Aluminium Casing
-        </b >
-        Shell is made of solid aluminium material, designed for long-term use even in rough conditions
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puSockets')" >
-        <span class="popuptext" id="puSockets" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > 4 x 1/4" Expression/Volume pedal inputs
-        </b >
-        Simply plug your favourite Volume and Expression pedals. 2 x 1/4" mono(2-pin) inputs to use with Volume pedals and Stereo pedals, and 2 x 1/4" stereo(3-pin) to use with Expression pedals only. Mono-type sockets needs to be calibrated on pedal swap on the first use, not necessary after power off.
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puUSBCport')" >
-        <span class="popuptext" id="puUSBCport" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > USB-C Port
-        </b >
-        Universal USB-C Port to charge, power, pass USB-MIDI data, act as host device
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puMIDIIN')" >
-        <span class="popuptext" id="puMIDIIN" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > 2 x 5-pin MIDI In
-        </b >
-        Legacy 5-pin inputs to receive MIDI data. Received midi messages can be reforwarded to other-type interfaces
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puMIDIOUT')" >
-        <span class="popuptext" id="puMIDIOUT" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > 2 x 5-pin MIDI Out
-        </b >
-        Legacy 5-pin outputs to send MIDI data to another MIDI-receiver devices, reforward MIDI data from other-type interfaces
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puBTindicator')" >
-        <span class="popuptext" id="puBTindicator" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > Bluetooth indicator
-        </b >
-        Bluetooth LED indicator shows the Bluetooth state, if controller in Bluetooth LowEnergy mode, Classic Bluetooth mode, or Bluetooth is turned off. LED will blink if any MIDI message received or send via Bluetooth interface
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puFootSwitches')" >
-        <span class="popuptext" id="puFootSwitches" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > 8 x Footswitches
-        </b >
-        8x High quality FootSwitches, can be used to send any type of MIDI messages, or operate controller itself. Send up to 20 different messages with one trigger in one moment of time. Assign MIDI messages via Application. Colored aluminium toppers are easily swappable for your customization
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puBatIndicator')" >
-        <span class="popuptext" id="puBatIndicator" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > Battery level indicator with function button
-        </b >
-        Check your battery level and toggle Bluetooth modes with function "Test" button. Tap button to show current battery level or wake up bluetooth if it was in sleep state, Press&Hold for 5 seconds to toggle BLE/Classic Mode, Press + Press&Hold for 5 seconds to turn off Bluetooth
-        </p >
-        </span >
-        </div >
-        <div class="popup" onclick="openPopUp('puKnobs')" >
-        <span class="popuptext" id="puKnobs" >
-        <p style="font-weight:normal" class="popupAllText" >
-        <b class="popupTitleText" > 20 x Control Knobs
-        </b >
-        20x Knobs to send any type of MIDI messages.Assign MIDI messages via Application. Colored plastic toppers are easily swappable for your customization
-        </p >
-        </span >
-        </div >
+      
       
       
       
@@ -664,7 +668,7 @@ borders: top right bottom left !important
                     <p class="u-text u-text-2">Controller are compatible with any device&amp;software that accepts MIDI technical standard, doesn't matter of brand or model it&nbsp;used with.<br>
                       <br>This means your ability to send and receive ANY type of MIDI message you need. As long as your pair device accepts MIDI, it will work perfectly and easy.
                     </p>
-                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-3">UNIVERSAL MIDI CONTROLLER</h3><span class="infinite u-file-icon u-icon u-text-white u-icon-1" data-animation-name="bounceIn" data-animation-duration="10000" data-animation-direction="" data-animation-out="0" data-animation-delay="3000"><img src="images/MIDI_LOGO.svg-73d0eeda.png" alt=""></span>
+                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-3">UNIVERSAL MIDI CONTROLLER</h3><span class="infinite u-file-icon u-icon u-text-white u-icon-1" data-animation-name="bounceIn" data-animation-duration="10000" data-animation-direction="" data-animation-out="0" data-animation-delay="3000"><img src="../images/MIDI_LOGO.svg-73d0eeda.png" alt=""></span>
                   </div>
                 </div>
               </div>
@@ -677,7 +681,7 @@ borders: top right bottom left !important
               <div class="u-repeater u-repeater-2">
                 <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-direction="" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-4">
-                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-custom-font u-font-lato u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="Left" data-animation-out="0">LED INDICATION</h3><span class="infinite u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-2" data-animation-name="customAnimationIn" data-animation-duration="750" data-animation-out="0" data-animation-direction="X" data-animation-delay="3000"><img src="images/2088831-21c9e83e.png" alt=""></span>
+                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-custom-font u-font-lato u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="Left" data-animation-out="0">LED INDICATION</h3><span class="infinite u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-2" data-animation-name="customAnimationIn" data-animation-duration="750" data-animation-out="0" data-animation-direction="X" data-animation-delay="3000"><img src="../images/2088831-21c9e83e.png" alt=""></span>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-out="0">Interactive, real-time visual feedback for each footswitch with own pack of tricolored LEDs, so you always know what's going on.<br>
                       <br>Battery level, Bluetooth status, Power indicators are also ​attend.
                     </p>
@@ -693,7 +697,7 @@ borders: top right bottom left !important
               <div class="u-repeater u-repeater-3">
                 <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="1000" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-6">
-                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-out="0"> MIDI AND FUNCTION MESSAGEs TYPES</h3><span class="u-file-icon u-icon u-text-white u-icon-3"><img src="images/1171493-d245f439.png" alt=""></span>
+                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-out="0"> MIDI AND FUNCTION MESSAGEs TYPES</h3><span class="u-file-icon u-icon u-text-white u-icon-3"><img src="../images/1171493-d245f439.png" alt=""></span>
                     <p class="u-text u-text-7" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-out="0"> Every control is independently programmable. Send ANY type of MIDI message including PC, CC, Note, Pitch, MMC and many more. Send ANY type of MIDI message you need!<br>
                       <br>To navigate the controller itself, use footswitch №8 to change color and current mode(bank). In different modes(banks) you may send different MIDI messages with other 7 footswitches. 1, 2, 3 modes(color per mode) are available.<br>
                     </p>
@@ -709,7 +713,7 @@ borders: top right bottom left !important
               <div class="u-repeater u-repeater-4">
                 <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="1750" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-8">
-                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-8"> MESSAGE STACKING</h3><span class="infinite u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-4" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0"><img src="images/17640-621e4159.png" alt=""></span>
+                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-8"> MESSAGE STACKING</h3><span class="infinite u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-4" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0"><img src="../images/17640-621e4159.png" alt=""></span>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-9"> Send up to 20 different MIDI messages across 16 MIDI channels with each footswitch in the moment of time.&nbsp;This allows you to control up to 20 different devices with a single switch! </p>
                   </div>
                 </div>
@@ -723,7 +727,7 @@ borders: top right bottom left !important
               <div class="u-repeater u-repeater-5">
                 <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-5" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="2250" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-10">
-                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-out="0">TAP-TEMPO INDICATION</h3><span class="infinite u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-5" data-animation-name="pulse" data-animation-duration="250" data-animation-out="0" data-animation-direction=""><img src="images/6752744-c31241cf.png" alt=""></span>
+                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-10" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-out="0">TAP-TEMPO INDICATION</h3><span class="infinite u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-5" data-animation-name="pulse" data-animation-duration="250" data-animation-out="0" data-animation-direction=""><img src="../images/6752744-c31241cf.png" alt=""></span>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-11">Define which footswitch will act as tap-tempo switch, visually followed with LED</p>
                   </div>
                 </div>
@@ -737,7 +741,7 @@ borders: top right bottom left !important
               <div class="u-repeater u-repeater-6">
                 <div class="u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="2750" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-12">
-                    <h3 class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-font-lato u-text u-text-12"> EXPRESSION&amp;VOLUME PEDAL CONTROL</h3><span class="u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-6"><img src="images/3011970-ba49114f.png" alt=""></span>
+                    <h3 class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-font-lato u-text u-text-12"> EXPRESSION&amp;VOLUME PEDAL CONTROL</h3><span class="u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-6"><img src="../images/3011970-ba49114f.png" alt=""></span>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-13"> Connect an expression/volume pedal for smooth continuous MIDI control.&nbsp;Interface has 2 inputs for volume(mono type-TS 6.35mm jack) and 2 inputs for expression(stereo type-TRS ​6.35mm jack).<br>
                       <br>Expression(TRS) pedals can be used with mono(TS)-type sockets aswell.<br>
                     </p>
@@ -753,7 +757,7 @@ borders: top right bottom left !important
               <div class="u-repeater u-repeater-7">
                 <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-7" data-animation-name="customAnimationIn" data-animation-duration="2750" data-animation-direction="" data-animation-delay="3000" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-14">
-                    <h3 class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-font-lato u-text u-text-14"> USB CLASS COMPLIANT AND POWERED</h3><span class="infinite u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-7" data-animation-name="customAnimationIn" data-animation-duration="10000" data-animation-direction="" data-animation-out="0"><img src="images/5270013-4d4ad789.png" alt=""></span>
+                    <h3 class="u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-md u-align-left-xl u-custom-font u-font-lato u-text u-text-14"> USB CLASS COMPLIANT AND POWERED</h3><span class="infinite u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-7" data-animation-name="customAnimationIn" data-animation-duration="10000" data-animation-direction="" data-animation-out="0"><img src="../images/5270013-4d4ad789.png" alt=""></span>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-15"> With MIDI over USB, control your favourite DAWs, plugins and music software on your PC, Android or iOS. Easily MIDI map your desired controls to any of your footswitch, knob or socket with software like Ableton Live and Logic Pro, ar any other.<br>
                       <br>Interface is fully USB powered and has an internal Li-Ion battery, so you don't have to concern yourself with a separate power supply.
                     </p>
@@ -769,7 +773,7 @@ borders: top right bottom left !important
               <div class="u-repeater u-repeater-8">
                 <div class="u-container-align-center-sm u-container-align-center-xs u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-8" data-animation-name="customAnimationIn" data-animation-duration="2250" data-animation-delay="3000" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-16">
-                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-16"> MULTI-TYPE MIDI IN/OUT</h3><span class="u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-8"><img src="images/all-a8be5d2c.png" alt=""></span>
+                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-16"> MULTI-TYPE MIDI IN/OUT</h3><span class="u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-8"><img src="../images/all-a8be5d2c.png" alt=""></span>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-17">Send and receive MIDI messages via legacy MIDI 5-pin DIN, USB-C and  Bluetooth wirelessly. This gives you direct connectivity to any MIDI device, without the need for a MIDI box, splitter or inerface-tointerface converters.&nbsp; </p>
                   </div>
                 </div>
@@ -783,13 +787,13 @@ borders: top right bottom left !important
               <div class="u-repeater u-repeater-9">
                 <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-9" data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="3500" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-18">
-                    <img class="infinite u-align-center-md u-align-center-sm u-align-center-xs u-expanded-width-lg u-expanded-width-xl u-image u-image-contain u-image-1" alt="" data-image-width="1140" data-image-height="1152" src="images/reforwarding_trsndpsrent1.webp" data-animation-name="pulse" data-animation-duration="3000" data-animation-out="0" data-animation-direction="">
-                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-custom-font u-font-lato u-text u-text-18">MIDI RE-FORWARDING</h3><span class="u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-9" data-animation-out="0"><img src="images/4159967-77969cf5.png" alt=""></span>
+                    <img class="infinite u-align-center-md u-align-center-sm u-align-center-xs u-expanded-width-lg u-expanded-width-xl u-image u-image-contain u-image-1" alt="" data-image-width="1140" data-image-height="1152" src="../images/reforwarding_trsndpsrent1.webp" data-animation-name="pulse" data-animation-duration="3000" data-animation-out="0" data-animation-direction="">
+                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-custom-font u-font-lato u-text u-text-18">MIDI RE-FORWARDING</h3><span class="u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-9" data-animation-out="0"><img src="../images/4159967-77969cf5.png" alt=""></span>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-19">Redirect incoming and outgoing MIDI messages from one input&amp;output-type to another.<br>
                       <br>Need to reforward MIDI messages from Bluetooth to USB? Not an issue, at all.<br>This allows you to pair slave and master devices, even if they dont have same MIDI I/O's interface-types to connect
                     </p>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-20">You are also able to interrupt and resume connections between I/O's and controller itself</p>
-                    <img class="infinite u-align-center u-expanded-width-md u-image u-image-contain u-image-default u-image-2" alt="" data-image-width="1224" data-image-height="1004" src="images/links_transparent_full.webp" data-animation-name="pulse" data-animation-duration="1500" data-animation-direction="" data-animation-delay="750">
+                    <img class="infinite u-align-center u-expanded-width-md u-image u-image-contain u-image-default u-image-2" alt="" data-image-width="1224" data-image-height="1004" src="../images/links_transparent_full.webp" data-animation-name="pulse" data-animation-duration="1500" data-animation-direction="" data-animation-delay="750">
                   </div>
                 </div>
               </div>
@@ -807,26 +811,26 @@ borders: top right bottom left !important
                       <br>The Update Panel app lets you view all your switch and message settings at once, allowing you to quickly make changes and name your presets with great clarity.<br>
                       <br>You can also backup individual presets or the entire controller to your computer, so you never lose your presets and settings. Even share them with your friends if you like!​ Available as a desktop application (Windows).&nbsp;​Connect with a USB-C cable. <br>
                       <br>
-                      <a href="DOWNLOADS-l-OK-Rig.html" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Download</a>&nbsp;and check it out!
-                    </p><span class="u-file-icon u-icon u-text-white u-icon-10"><img src="images/1218407-a240a111.png" alt=""></span>
+                      <a href="../ru/DOWNLOADS-l-OK-Rig.html" target="_blank" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Download</a>&nbsp;and check it out!
+                    </p><span class="u-file-icon u-icon u-text-white u-icon-10"><img src="../images/1218407-a240a111.png" alt=""></span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="u-align-center u-expanded-width-md u-expanded-width-xs u-gallery u-layout-horizontal u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" id="carousel-9ef9">
-              <div class="u-gallery-inner u-gallery-inner-1" role="listbox"><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-1"><div class="u-back-slide u-back-slide-1" data-image-width="1920" data-image-height="1080"><img class="u-back-image u-image-contain" src="images/Screenshot_Uplod.webp" alt="">
+              <div class="u-gallery-inner u-gallery-inner-1" role="listbox"><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-1"><div class="u-back-slide u-back-slide-1" data-image-width="1920" data-image-height="1080"><img class="u-back-image u-image-contain" src="../images/Screenshot_Uplod.webp" alt="">
 </div><div class="u-align-center u-container-align-center u-over-slide u-shading u-over-slide-1"><h3 class="u-align-center u-gallery-heading" style="width: 333px; margin-right: auto; margin-left: auto;"></h3><p class="u-align-center u-gallery-text" style="width: 333px; margin-right: auto; margin-left: auto;"></p>
 </div>
-</div><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-2"><div class="u-back-slide u-back-slide-2" data-image-width="1920" data-image-height="1080"><img class="u-back-image" src="images/Screenshot_type.webp">
+</div><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-2"><div class="u-back-slide u-back-slide-2" data-image-width="1920" data-image-height="1080"><img class="u-back-image" src="../images/Screenshot_type.webp">
 </div><div class="u-align-center u-container-align-center u-over-slide u-shading u-over-slide-2"><h3 class="u-align-center u-gallery-heading" style="width: 333px; margin-right: auto; margin-left: auto;"></h3><p class="u-align-center u-gallery-text" style="width: 333px; margin-right: auto; margin-left: auto;"></p>
 </div>
-</div><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-3"><div class="u-back-slide" data-image-width="1920" data-image-height="1080"><img class="u-back-image" src="images/Screenshot_channels.webp">
+</div><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-3"><div class="u-back-slide" data-image-width="1920" data-image-height="1080"><img class="u-back-image" src="../images/Screenshot_channels.webp">
 </div><div class="u-align-center u-container-align-center u-over-slide u-shading u-over-slide-3"><h3 class="u-align-center u-gallery-heading" style="width: 333px; margin-right: auto; margin-left: auto;"></h3><p class="u-align-center u-gallery-text" style="width: 333px; margin-right: auto; margin-left: auto;"></p>
 </div>
-</div><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-4"><div class="u-back-slide" data-image-width="1363" data-image-height="700"><img class="u-back-image" src="images/Screenshot_presets_help.webp">
+</div><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-4"><div class="u-back-slide" data-image-width="1363" data-image-height="700"><img class="u-back-image" src="../images/Screenshot_presets_help.webp">
 </div><div class="u-align-center u-container-align-center u-over-slide u-shading u-over-slide-4"><h3 class="u-align-center u-gallery-heading" style="width: 333px; margin-right: auto; margin-left: auto;"></h3><p class="u-align-center u-gallery-text" style="width: 333px; margin-right: auto; margin-left: auto;"></p>
 </div>
-</div><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-5" data-image-width="1346" data-image-height="636"><div class="u-back-slide"><img class="u-back-image u-image-contain" src="images/Screenshot_footswitches.webp">
+</div><div class="u-effect-fade u-gallery-item u-shape-rectangle u-gallery-item-5" data-image-width="1346" data-image-height="636"><div class="u-back-slide"><img class="u-back-image u-image-contain" src="../images/Screenshot_footswitches.webp">
 </div><div class="u-align-center u-container-align-center u-over-slide u-shading u-over-slide-5"><h3 class="u-align-center u-gallery-heading" style="width: 333px; margin-right: auto; margin-left: auto;"></h3><p class="u-align-center u-gallery-text" style="width: 333px; margin-right: auto; margin-left: auto;"></p>
 </div>
 </div></div>
@@ -863,7 +867,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
               <div class="u-repeater u-repeater-11">
                 <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-11" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="2500" data-animation-out="0">
                   <div class="u-container-layout u-similar-container u-container-layout-22">
-                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-23">PRESETS MANAGING</h3><span class="u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-11"><img src="images/5001298-6fa5d3b1.png" alt=""></span>
+                    <h3 class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-left-xl u-custom-font u-font-lato u-text u-text-23">PRESETS MANAGING</h3><span class="u-align-center-sm u-align-center-xs u-file-icon u-icon u-text-white u-icon-11"><img src="../images/5001298-6fa5d3b1.png" alt=""></span>
                     <p class="u-align-center-sm u-align-center-xs u-text u-text-24">Manage your settings via app, save them as presets, store presets on a device, switch presets on-a-fly.<br>Upload and store up to 7 presets to the device, saving presets inside app is unlimited.
                     </p>
                   </div>
@@ -880,7 +884,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <div class="u-accordion u-align-center u-collapsed-by-default u-expanded-width u-spacing-2 u-accordion-1">
           <div class="u-accordion-item">
             <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-palette-1-light-1 u-button-style u-custom-font u-font-merriweather u-hover-palette-1-light-2 u-text-active-white u-text-body-alt-color u-text-hover-black u-accordion-link-1" id="link-accordion-7c0e" aria-controls="accordion-7c0e" aria-selected="false">
-              <span class="u-accordion-link-text">General</span><span class="u-accordion-link-icon u-active-palette-1-base u-file-icon u-hover-palette-1-base u-icon u-icon-circle u-palette-1-base u-text-active-palette-1-base u-text-hover-white u-icon-1"><img src="images/8113168-9b0645cc-1208ad6c.png" alt=""></span>
+              <span class="u-accordion-link-text">General</span><span class="u-accordion-link-icon u-active-palette-1-base u-file-icon u-hover-palette-1-base u-icon u-icon-circle u-palette-1-base u-text-active-palette-1-base u-text-hover-white u-icon-1"><img src="../images/8113168-9b0645cc-1208ad6c.png" alt=""></span>
             </a>
             <div class="u-accordion-pane u-align-left u-border-1 u-border-grey-75 u-border-no-top u-container-style u-shape-rectangle u-accordion-pane-1" id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
               <div class="u-container-layout u-container-layout-1">
@@ -918,7 +922,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <div class="u-accordion u-align-center u-collapsed-by-default u-expanded-width u-spacing-2 u-accordion-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
           <div class="u-accordion-item">
             <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-palette-1-light-1 u-button-style u-custom-font u-font-merriweather u-hover-palette-1-light-2 u-text-active-white u-text-body-alt-color u-text-hover-black u-accordion-link-2" id="link-accordion-7c0e" aria-controls="accordion-7c0e" aria-selected="false">
-              <span class="u-accordion-link-text">Specification</span><span class="u-accordion-link-icon u-active-palette-1-base u-file-icon u-hover-palette-1-base u-icon u-icon-circle u-palette-1-base u-text-active-palette-1-base u-text-hover-white u-icon-2"><img src="images/8113168-9b0645cc-1208ad6c.png" alt=""></span>
+              <span class="u-accordion-link-text">Specification</span><span class="u-accordion-link-icon u-active-palette-1-base u-file-icon u-hover-palette-1-base u-icon u-icon-circle u-palette-1-base u-text-active-palette-1-base u-text-hover-white u-icon-2"><img src="../images/8113168-9b0645cc-1208ad6c.png" alt=""></span>
             </a>
             <div class="u-accordion-pane u-align-left u-border-1 u-border-grey-75 u-border-no-top u-container-style u-shape-rectangle u-accordion-pane-2" id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
               <div class="u-container-layout u-container-layout-2">
@@ -1008,7 +1012,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <div class="u-accordion u-align-center u-collapsed-by-default u-expanded-width u-spacing-2 u-accordion-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
           <div class="u-accordion-item">
             <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-palette-1-light-1 u-button-style u-custom-font u-font-merriweather u-hover-palette-1-light-2 u-text-active-white u-text-body-alt-color u-text-hover-black u-accordion-link-3" id="link-accordion-7c0e" aria-controls="accordion-7c0e" aria-selected="false">
-              <span class="u-accordion-link-text">Dimensions</span><span class="u-accordion-link-icon u-active-palette-1-base u-file-icon u-hover-palette-1-base u-icon u-icon-circle u-palette-1-base u-text-active-palette-1-base u-text-hover-white u-icon-3"><img src="images/8113168-9b0645cc-1208ad6c.png" alt=""></span>
+              <span class="u-accordion-link-text">Dimensions</span><span class="u-accordion-link-icon u-active-palette-1-base u-file-icon u-hover-palette-1-base u-icon u-icon-circle u-palette-1-base u-text-active-palette-1-base u-text-hover-white u-icon-3"><img src="../images/8113168-9b0645cc-1208ad6c.png" alt=""></span>
             </a>
             <div class="u-accordion-pane u-align-left u-border-1 u-border-grey-75 u-border-no-top u-container-style u-shape-rectangle u-accordion-pane-3" id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
               <div class="u-container-layout u-container-layout-3">
@@ -1045,7 +1049,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         <div class="u-accordion u-align-center u-collapsed-by-default u-expanded-width u-spacing-2 u-accordion-4">
           <div class="u-accordion-item">
             <a class="u-accordion-link u-active-palette-1-base u-border-2 u-border-active-palette-1-light-1 u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-palette-1-light-1 u-button-style u-custom-font u-font-merriweather u-hover-palette-1-light-2 u-text-active-white u-text-body-alt-color u-text-hover-black u-accordion-link-4" id="link-accordion-7c0e" aria-controls="accordion-7c0e" aria-selected="false">
-              <span class="u-accordion-link-text">Requirements</span><span class="u-accordion-link-icon u-active-palette-1-base u-file-icon u-hover-palette-1-base u-icon u-icon-circle u-palette-1-base u-text-active-palette-1-base u-text-hover-white u-icon-4"><img src="images/8113168-9b0645cc-1208ad6c.png" alt=""></span>
+              <span class="u-accordion-link-text">Requirements</span><span class="u-accordion-link-icon u-active-palette-1-base u-file-icon u-hover-palette-1-base u-icon u-icon-circle u-palette-1-base u-text-active-palette-1-base u-text-hover-white u-icon-4"><img src="../images/8113168-9b0645cc-1208ad6c.png" alt=""></span>
             </a>
             <div class="u-accordion-pane u-align-left u-border-1 u-border-grey-75 u-border-no-top u-container-style u-shape-rectangle u-accordion-pane-4" id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
               <div class="u-container-layout u-valign-bottom-lg u-container-layout-4">
@@ -1161,7 +1165,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
               </div>
             </div>
             <div class="u-align-center u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-icon-circle u-text-white u-icon-2"><img src="images/2991112-bf7b02ce.png" alt=""></span>
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-icon-circle u-text-white u-icon-2"><img src="../images/2991112-bf7b02ce.png" alt=""></span>
                 <h3 class="u-align-left u-text u-text-4">Documentation</h3>
                 <p class="u-align-left u-text u-text-default u-text-5">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
               </div>
@@ -1174,8 +1178,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2e1d"><div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
-        <p class="u-align-center u-small-text u-text u-text-variant u-text-1" data-lang-ru="<b>©<span style=&quot;font-weight: 400;&quot;>​2023, OK Rig.&amp;nbsp;</span></b>All Rights Reserved."><b>©<span style="font-weight: 400;"> 2023, OK Rig.&nbsp;</span></b>All Rights Reserved.
-        </p>
+        <p class="u-align-center u-small-text u-text u-text-variant u-text-1"><b>©<span style="font-weight: 400;">​2023, OK Rig.&nbsp;</span></b>All Rights Reserved.</p>
       </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-a51f">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -1316,6 +1319,6 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
   .u-cookies-consent .u-layout-cell-2 {
     min-height: 15px;
   }
-}</style></section><span style="height: 40px; width: 40px; right: 40px; bottom: 55px; margin-left: 0px; margin-top: 0px; margin-right: auto;" class="u-back-to-top u-file-icon u-icon u-opacity u-opacity-90 u-text-palette-3-base" data-href="#"><img src="images/ce73d930.png" alt=""></span>
+}</style></section><span style="height: 40px; width: 40px; right: 40px; bottom: 55px; margin-left: 0px; margin-top: 0px; margin-right: auto;" class="u-back-to-top u-file-icon u-icon u-opacity u-opacity-90 u-text-palette-3-base" data-href="#"><img src="../images/ce73d930.png" alt=""></span>
   
 </body></html>
