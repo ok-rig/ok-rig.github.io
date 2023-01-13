@@ -1,3 +1,3 @@
-https://ok-rig.github.io
+http://ok-rig.github.io
 
-https://okrig.mooo.com
+http://okrig.mooo.com
