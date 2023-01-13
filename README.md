@@ -1,2 +1,2 @@
-https://ok-rig.github.io/
-ok-rig.mooo.com
+https://ok-rig.github.io
+https://ok-rig.mooo.com
