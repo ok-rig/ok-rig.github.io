@@ -112,13 +112,14 @@
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// </style>
     <script> window.onload = function () {
 			
+			//Preloader
 			document.body.classList.add('loaded_hiding');
             window.setTimeout(function () {
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
             }, 500);
 			
-			
+			//redirections
             for (var i = 0; i < document.getElementsByClassName('nextslide').length; i++) {
                 document.getElementsByClassName('nextslide')[i].onclick = function () { nextSlide() }
             }
@@ -158,7 +159,7 @@
             document.querySelector('.u-section-3-3').addEventListener('touchmove', preventKeyBoardScroll);
         }
 		 
-		// 
+		//test
         setInterval(function () {
             //  alert();
         }, 10000)
@@ -292,19 +293,6 @@
   </div>
 </div>
 
-
-
-	
-
-  <script>
-    window.onload = function () {
-      document.body.classList.add('loaded_hiding');
-      window.setTimeout(function () {
-        document.body.classList.add('loaded');
-        document.body.classList.remove('loaded_hiding');
-      }, 500);
-    }
-  </script>
   <header class=" u-clearfix u-header u-section-row-container" id="sec-7048" style=""><div class="u-section-rows">
         <div class="u-black u-clearfix u-section-row" id="sec-cbba" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
           
@@ -377,7 +365,7 @@ borders: top right bottom left !important
       <div class="u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
         <div class="u-container-layout u-container-layout-1">
           <img class="u-align-center u-image u-image-contain u-image-1" src="/images/ok_midi_lounge_max_header2.webp" data-image-width="3573" data-image-height="2782" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0">
-          <div class="u-container-style u-expanded-width u-group u-palette-1-dark-3 u-group-2">
+          <div class="u-container-style u-expanded-width u-group u-opacity u-opacity-30 u-palette-1-base u-group-2">
             <div class="u-container-layout u-container-layout-2">
               <div class="u-align-left u-expanded-width-sm u-expanded-width-xs u-layout-grid u-list u-list-2">
                 <div class="u-repeater u-repeater-2">
