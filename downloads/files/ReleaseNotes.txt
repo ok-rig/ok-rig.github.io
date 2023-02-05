@@ -1,9 +1,0 @@
-Update Panel
-V1.0.0
-
-- Initial Release
-
-Firmware
-V1.0.0
-
-- Initial Release
