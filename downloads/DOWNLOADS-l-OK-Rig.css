@@ -17,6 +17,7 @@
 }
 
 .u-section-1 .u-text-1 {
+  font-size: 2.25rem;
   margin: 24px 0 0 9px;
 }
 
@@ -51,7 +52,6 @@
     width: auto;
     margin-top: 12px;
     margin-left: 0;
-    font-size: 2.25rem;
   }
 
   .u-section-1 .u-text-2 {
@@ -191,7 +191,7 @@
 }
 
 .u-section-2-1 .u-text-2 {
-  width: 191px;
+  width: 396px;
   margin: 20px auto 0;
 }
 
@@ -229,8 +229,8 @@
 .u-section-2-1 .u-btn-1 {
   background-image: none;
   font-weight: 700;
-  font-size: 1.125rem;
   font-style: normal;
+  font-size: 1rem;
   margin-top: 3px;
   text-decoration: underline !important;
   padding: 0;
@@ -243,10 +243,10 @@
 }
 
 .u-section-2-1 .u-btn-2 {
-  font-size: 1.125rem;
-  font-style: normal;
-  text-decoration: underline;
   font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  text-decoration: underline;
   padding: 0;
 }
 
@@ -275,7 +275,7 @@
 }
 
 .u-section-2-1 .u-text-3 {
-  width: 191px;
+  width: 396px;
   margin: 20px auto 0;
 }
 
@@ -393,20 +393,20 @@
     font-size: 1.875rem;
   }
 
+  .u-section-2-1 .u-text-2 {
+    width: 320px;
+  }
+
   .u-section-2-1 .u-table-cell-1 {
     font-size: 0.875rem;
   }
 
-  .u-section-2-1 .u-btn-1 {
-    font-size: 1rem;
-  }
-
-  .u-section-2-1 .u-btn-2 {
-    font-size: 1rem;
-  }
-
   .u-section-2-1 .u-table-cell-4 {
     font-size: 0.875rem;
+  }
+
+  .u-section-2-1 .u-text-3 {
+    width: 320px;
   }
 }.preloader {
   /*фиксированное позиционирование*/
