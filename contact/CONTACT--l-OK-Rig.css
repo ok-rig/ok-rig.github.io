@@ -37,8 +37,13 @@
   margin-right: 0;
   vertical-align: -4px;
   font-size: 1.4em;
-  width: 21px;
-  height: 28px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-icon-1 {
+    width: 21px;
+    height: 28px;
+  }
 }
 
 @media (max-width: 575px) {

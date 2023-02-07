@@ -229,8 +229,8 @@
 .u-section-2-1 .u-btn-1 {
   background-image: none;
   font-weight: 700;
+  font-size: 1.125rem;
   font-style: normal;
-  font-size: 1rem;
   margin-top: 3px;
   text-decoration: underline !important;
   padding: 0;
@@ -243,10 +243,10 @@
 }
 
 .u-section-2-1 .u-btn-2 {
+  text-decoration: underline !important;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
-  text-decoration: underline;
   padding: 0;
 }
 
@@ -399,6 +399,14 @@
 
   .u-section-2-1 .u-table-cell-1 {
     font-size: 0.875rem;
+  }
+
+  .u-section-2-1 .u-btn-1 {
+    font-size: 1rem;
+  }
+
+  .u-section-2-1 .u-btn-2 {
+    text-decoration: underline;
   }
 
   .u-section-2-1 .u-table-cell-4 {
