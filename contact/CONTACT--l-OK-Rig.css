@@ -1,0 +1,128 @@
+ .u-section-1 {
+  background-image: linear-gradient(#4c7397, black);
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 448px;
+}
+
+.u-section-1 .u-image-1 {
+  width: 380px;
+  height: 380px;
+  margin: 34px auto 0;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 2.25rem;
+  width: 304px;
+  margin: -266px auto 0;
+}
+
+.u-section-1 .u-text-2 {
+  width: 324px;
+  margin: 19px auto 0;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: solid;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  background-image: none;
+  box-shadow: 8px -2px 27px 0px rgba(0,0,0,0.6);
+  margin: 21px auto 60px;
+  padding: 6px 9px;
+}
+
+.u-section-1 .u-icon-1 {
+  margin-right: 0;
+  vertical-align: -4px;
+  font-size: 1.4em;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-icon-1 {
+    width: 21px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 408px;
+  }
+
+  .u-section-1 .u-image-1 {
+    width: 340px;
+    height: 340px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 1.875rem;
+    margin-top: -245px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: 20px;
+  }
+}.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: black;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: dodgerBlue;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+.loaded_hiding .preloader {
+  transition: 0.3 opacity;
+  opacity: 0;
+}
+.loaded .preloader {
+  display: none;
+}
