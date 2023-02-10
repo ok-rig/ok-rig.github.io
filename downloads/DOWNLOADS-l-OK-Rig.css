@@ -145,6 +145,7 @@
 .u-block-5ebf-3 {
   position: absolute;
   left: 0;
+  text-decoration: underline !important;
 }
 
 .u-block-5ebf-4 {
@@ -403,10 +404,6 @@
 
   .u-section-2-1 .u-btn-1 {
     font-size: 1rem;
-  }
-
-  .u-section-2-1 .u-btn-2 {
-    text-decoration: underline;
   }
 
   .u-section-2-1 .u-table-cell-4 {
