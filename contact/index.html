@@ -16,8 +16,15 @@
         document.body.classList.remove('loaded_hiding');
       }, 500);
     
-	    jQuery.get('/files/LoungeMax/latest_version', data);
-	     alert(data);
+		    
+	var asd;	    
+jQuery.get('files/LoungeMax/latest_version', function(data) {
+   asd = data;
+});
+		alert(asd);    
+		    
+		    
+		    
 	    } </script>
     
     <link rel="icon" href="images/favicon.png">
