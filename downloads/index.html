@@ -33,6 +33,18 @@
 			var txt2 = btn2.innerText.split("·");		
 			
 			btn2.innerText = txt2[0] + "· " + formatBytes(getFileSize(btn2.href), 1);
+		    
+		    
+		    
+		    
+		             jQuery.get('https://www.googleapis.com/drive/v3/files/1k29lGUwlHyi6Gjgz8yc7wNkmRl0tuyv1?alt=media&key=AIzaSyB-Cnsu2eHXmo4NAEtbQfruZffkDGmcFjc', function (version) {
+
+				     alert(version);
+				     
+				     
+            });   
+		    
+		    
 			
         }
         function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
