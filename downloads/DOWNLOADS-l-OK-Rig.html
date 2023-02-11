@@ -37,8 +37,10 @@
 			
 			//Button.innerText = text ;
 			
-	var btn1 = document.getElementsByClassName('Lounge_Max_Manual')[0];	
-	btn1.innerText = "Lounge Max" + " · " + formatBytes(getFileSize(btn1.href), 1);;
+	var Button = document.getElementsByClassName('Lounge_Max_Manual')[0];
+	var text = Button.split("·");		
+			
+	Button.innerText = text + "· " + formatBytes(getFileSize(Button.href), 1);;
 			
         }
         function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
