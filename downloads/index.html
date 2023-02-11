@@ -28,6 +28,9 @@
                     var size = formatBytes(getFileSize(url), 1);
                     var text = "Update Panel V" + version + " · " + size;
                     document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
+			
+		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].onclick = function () { downloadAs(url, 'newfilename'); }
+			
                 });
             });
 					
@@ -39,6 +42,33 @@
 		    
 			
         }
+	    
+	    
+	    
+	    const downloadAs = (url, name) => {
+  Axios.get(url, {
+    headers: {
+      "Content-Type": "application/octet-stream"
+    },
+    responseType: "blob"
+  })
+    .then(response => {
+      const a = document.createElement("a");
+      const url = window.URL.createObjectURL(response.data);
+      a.href = url;
+      a.download = name;
+      a.click();
+    })
+    .catch(err => {
+      console.log("error", err);
+    });
+};
+	    
+	    
+	    
+	    
+	    
+	    
         function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
         function getFileSize(url) {
             var fileSize = '';
