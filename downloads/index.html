@@ -22,20 +22,62 @@
 		
 		
 		
-		let version;
-		jQuery.get('/files/LoungeMax/latest_version', function(data) {
-			
-			version = data;
-		
+		jQuery.get('/files/LoungeMax/latest_version', function(version) {
+
+		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = "Update Panel V" + version + " . ";	
 			
 });
 		
 		
 		
-		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = version;	
+				jQuery.get('/files/LoungeMax/latest_version_direct_link', function(url) {
+
+		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText + getFileSize(url);
+			
+});
+		    
+		    
+		    
+		    
+		    
 		
 		
-	} </script>
+	} 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	function getFileSize(url)
+{
+    var fileSize = '';
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false); // false = Synchronous
+
+    http.send(null); // it will stop here until this http request is complete
+
+    // when we are here, we already have a response, b/c we used Synchronous XHR
+
+    if (http.status === 200) {
+        fileSize = http.getResponseHeader('content-length');
+        console.log('fileSize = ' + fileSize);
+    }
+
+    return fileSize;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
     
     <link rel="icon" href="images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
