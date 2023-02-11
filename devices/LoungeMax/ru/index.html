@@ -18,6 +18,11 @@
                 document.body.classList.remove('loaded_hiding');
             }, 500);
 			
+			if (getLastPart(window.location.href) === "ru") { document.title = 'Lounge Max | OK Rig'}
+			
+			
+			
+			
 			//redirections
             for (var i = 0; i < document.getElementsByClassName('nextslide').length; i++) {
                 document.getElementsByClassName('nextslide')[i].onclick = function () { nextSlide() }
@@ -42,9 +47,24 @@
 			
 			
             disableTouch();
+			
+			
+			let year =  new Date().getFullYear();
+			document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
+			
+			
         }
 		 
 		 
+	
+	function getLastPart(url) {
+    var parts = url.split("/");
+    return (url.lastIndexOf('/') !== url.length - 1 ? parts[parts.length - 1] : parts[parts.length - 2]);
+}
+			
+	
+	
+	
 		//DisableTouch
         function preventKeyBoardScroll(e) {
             e.preventDefault();
@@ -305,7 +325,7 @@ borders: top right bottom left !important
           </div>
         </div>
       </div>
-      <h2 class="u-align-right u-subtitle u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0" data-animation-delay="1500"><span class="u-text-palette-1-light-3">Простой.Гибкий&nbsp;&nbsp;</span><span class="u-text-palette-1-base"><br>Max&nbsp;&nbsp;</span></h2>
+      <h2 class="u-align-right u-subtitle u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0" data-animation-delay="1500"><span class="u-text-palette-1-light-3">Простой.Гибкий&nbsp;&nbsp;</span><span class="u-text-palette-1-base"><br>Max&nbsp; &nbsp;&nbsp;</span></h2>
       <img class="u-align-center u-image u-image-contain u-image-round u-radius-10 u-image-2" src="/images/wordlogo-lines-scale-6_00x-gigapixel.png" alt="" data-image-width="5200" data-image-height="1312" data-animation-name="flipIn" data-animation-duration="3000" data-animation-direction="X" data-animation-out="0" data-animation-delay="2500">
     </section>
     <section class="u-align-center u-clearfix u-gradient u-section-2" id="sec-55f5">
@@ -396,7 +416,7 @@ borders: top right bottom left !important
               </div>
             </div>
             <a href="##slide1Button2" class="pointerforbuttons slide1Button2 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-white u-white u-btn-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="Power button with indicator">+</a>
-            <a href="#" class="pointerforbuttons slide1Button1 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-black u-white u-btn-2" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="Tricolored individual LED Indicators per FootSwitch"><span style="font-size: 1.5rem;">+</span></a>
+            <a href="##" class="pointerforbuttons slide1Button1 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-black u-white u-btn-2" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="Tricolored individual LED Indicators per FootSwitch"><span style="font-size: 1.5rem;">+</span></a>
             <a href="##slide1Button3" class="pointerforbuttons slide1Button3 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-white u-white u-btn-3" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="Full-Aluminium Casing">+</a>
           </div>
         </div>
@@ -517,26 +537,6 @@ borders: top right bottom left !important
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
 
 
 
@@ -639,7 +639,8 @@ borders: top right bottom left !important
             <b class="popupTitleText">
                 <br>Индикатор заряда батареи с функциональной кнопкой<br><br>
             </b>
-            Check your battery level and toggle Bluetooth modes with function button. Tap button to show current battery level or wake up bluetooth if it was in sleep state, Press&Hold for 5 seconds to toggle BLE/Classic Mode, Press + Press&Hold for 5 seconds to turn off Bluetooth
+			Проверяй текущий уровень заряда одним нажатием кнопки. Так-же кнопка служит для навигации по режимам Bluetooth. Простое нажатие - включает передатчик, если он был выключен.
+			Удерживание на протяжении 5 секунд - переключение между Bluetooth Low Energy и Классическим Bluetooth. Двойное нажатие и удерживение 5 секунд - выключает передатчик(для экономии энергии).
         </p>
     </span>
 </div>
@@ -649,7 +650,7 @@ borders: top right bottom left !important
             <b class="popupTitleText">
                 <br>20 x Ручек<br><br>
             </b>
-            20x Knobs to send any type of MIDI messages.Assign MIDI messages via Application. Colored plastic toppers are easily swappable for your customization
+            20 Ручек потенциометров высокого качества, для отправки MIDI. Нужные MIDI команды назначаются в приложении. Лёгкая смена цветных пластиковых насадок для персонализации
         </p>
     </span>
 </div>
@@ -659,6 +660,26 @@ borders: top right bottom left !important
 
 
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -675,7 +696,7 @@ borders: top right bottom left !important
       
       
     </section>
-    <section class="u-black u-clearfix u-section-4" id="sec-e57e">
+    <section class="u-black u-clearfix u-section-4" id="Features">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-align-left u-custom-font u-font-lato u-text u-text-1" data-animation-name="flipIn" data-animation-duration="4000" data-animation-direction="X" data-animation-out="0" data-animation-delay="0">Возможности</h1>
         <div class="u-align-center u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
@@ -879,7 +900,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </div>
       </div>
     </section>
-    <section class="u-align-left u-clearfix u-gradient u-section-5" id="sec-4b88" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+    <section class="u-align-left u-clearfix u-gradient u-section-5" id="DataFacts" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-align-center u-custom-font u-font-lato u-text u-text-body-alt-color u-text-1">Параметры</h1>
         <div class="u-accordion u-align-center u-collapsed-by-default u-expanded-width u-spacing-2 u-accordion-1">
@@ -1139,7 +1160,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2e1d"><div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
-        <p class="u-align-center u-small-text u-text u-text-variant u-text-1"><b>©<span style="font-weight: 400;">​2023, OK Rig. Все Права Защищены.</span></b></p>
+        <p class="copyright u-align-center u-small-text u-text u-text-variant u-text-1"><b><span style="font-weight: 400;">OK Rig. Все Права Защищены.</span></b></p>
       </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-a51f">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">

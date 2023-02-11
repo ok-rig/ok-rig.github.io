@@ -18,6 +18,11 @@
                 document.body.classList.remove('loaded_hiding');
             }, 500);
 			
+			if (getLastPart(window.location.href) === "ru") { document.title = 'Lounge Max | OK Rig'}
+			
+			
+			
+			
 			//redirections
             for (var i = 0; i < document.getElementsByClassName('nextslide').length; i++) {
                 document.getElementsByClassName('nextslide')[i].onclick = function () { nextSlide() }
@@ -42,9 +47,24 @@
 			
 			
             disableTouch();
+			
+			
+			let year =  new Date().getFullYear();
+			document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
+			
+			
         }
 		 
 		 
+	
+	function getLastPart(url) {
+    var parts = url.split("/");
+    return (url.lastIndexOf('/') !== url.length - 1 ? parts[parts.length - 1] : parts[parts.length - 2]);
+}
+			
+	
+	
+	
 		//DisableTouch
         function preventKeyBoardScroll(e) {
             e.preventDefault();
@@ -292,19 +312,19 @@ borders: top right bottom left !important
                 <div class="u-repeater u-repeater-2">
                   <div class="u-container-style u-hover-feature u-list-item u-repeater-item u-shape-rectangle u-list-item-1">
                     <div class="u-container-layout u-similar-container u-container-layout-3">
-                      <a href="/Lounge-Max-l-OK-Rig.html#View" class="u-align-center u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-1" data-lang-en="{&quot;content&quot;:&quot;​Overview<br>&quot;,&quot;href&quot;:&quot;91220138#View&quot;}" data-lang-ru="{&quot;content&quot;:&quot;​Oбзор<br>&quot;,&quot;href&quot;:&quot;91220138#View&quot;}"> Overview<br>
+                      <a href="#View" class="u-align-center u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-1" data-lang-en="{&quot;content&quot;:&quot;​Overview<br>&quot;,&quot;href&quot;:&quot;#View&quot;}" data-lang-ru="{&quot;content&quot;:&quot;​Oбзор<br>&quot;,&quot;href&quot;:&quot;91220138#View&quot;}"> Overview<br>
                       </a>
                     </div>
                   </div>
                   <div class="u-container-style u-hover-feature u-list-item u-repeater-item u-shape-rectangle u-list-item-2">
                     <div class="u-container-layout u-similar-container u-container-layout-4">
-                      <a href="/Lounge-Max-l-OK-Rig.html#sec-e57e" class="u-align-center u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-2" data-lang-en="{&quot;content&quot;:&quot;Features<br>&quot;,&quot;href&quot;:&quot;91220138#sec-e57e&quot;}" data-lang-ru="{&quot;content&quot;:&quot;Возможности<br>&quot;,&quot;href&quot;:&quot;91220138#sec-e57e&quot;}">Features<br>
+                      <a href="#Features" class="u-align-center u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-2" data-lang-en="{&quot;content&quot;:&quot;Features<br>&quot;,&quot;href&quot;:&quot;#Features&quot;}" data-lang-ru="{&quot;content&quot;:&quot;Возможности<br>&quot;,&quot;href&quot;:&quot;91220138#sec-e57e&quot;}">Features<br>
                       </a>
                     </div>
                   </div>
                   <div class="u-container-style u-hover-feature u-list-item u-repeater-item u-shape-rectangle u-list-item-3">
                     <div class="u-container-layout u-similar-container u-container-layout-5">
-                      <a href="/Lounge-Max-l-OK-Rig.html#sec-4b88" class="u-align-center u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-3" data-lang-en="{&quot;content&quot;:&quot;​​Data &amp;amp; Facts<br>&quot;,&quot;href&quot;:&quot;91220138#sec-4b88&quot;}" data-lang-ru="{&quot;content&quot;:&quot;​​Параметры<br>&quot;,&quot;href&quot;:&quot;91220138#sec-4b88&quot;}"> Data &amp; Facts<br>
+                      <a href="#Data&amp;Facts" class="u-align-center u-btn u-button-style u-custom-item u-none u-text-hover-palette-2-base u-btn-3" data-lang-en="{&quot;content&quot;:&quot;​​Data &amp;amp; Facts<br>&quot;,&quot;href&quot;:&quot;#Data&amp;Facts&quot;}" data-lang-ru="{&quot;content&quot;:&quot;​​Параметры<br>&quot;,&quot;href&quot;:&quot;91220138#sec-4b88&quot;}"> Data &amp; Facts<br>
                       </a>
                     </div>
                   </div>
@@ -314,7 +334,7 @@ borders: top right bottom left !important
           </div>
         </div>
       </div>
-      <h2 class="u-align-right u-subtitle u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0" data-animation-delay="1500" data-lang-en="<span class=&quot;u-text-palette-1-light-3&quot;>Simple.Vers​​atile</span><span class=&quot;u-text-palette-1-base&quot;><br>Ultimate</span>" data-lang-ru="<span class=&quot;u-text-palette-1-light-3&quot;>Простой.Гибкий&amp;nbsp;&amp;nbsp;</span><span class=&quot;u-text-palette-1-base&quot;><br>Max&amp;nbsp;&amp;nbsp;</span>">
+      <h2 class="u-align-right u-subtitle u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="2000" data-animation-out="0" data-animation-delay="1500" data-lang-en="<span class=&quot;u-text-palette-1-light-3&quot;>Simple.Vers​​atile</span><span class=&quot;u-text-palette-1-base&quot;><br>Ultimate</span>" data-lang-ru="<span class=&quot;u-text-palette-1-light-3&quot;>Простой.Гибкий&amp;nbsp;&amp;nbsp;</span><span class=&quot;u-text-palette-1-base&quot;><br>Max&amp;nbsp; &amp;nbsp;&amp;nbsp;</span>">
         <span class="u-text-palette-1-light-3">Simple.Vers​​atile</span>
         <span class="u-text-palette-1-base">
           <br>Ultimate
@@ -411,7 +431,7 @@ borders: top right bottom left !important
               </div>
             </div>
             <a href="##slide1Button2" class="pointerforbuttons slide1Button2 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-white u-white u-btn-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="Power button with indicator" data-lang-en="{&quot;content&quot;:&quot;+&quot;,&quot;href&quot;:&quot;##slide1Button2&quot;}" data-lang-ru="{&quot;content&quot;:&quot;+&quot;,&quot;href&quot;:&quot;##slide1Button2&quot;}">+</a>
-            <a href="##slide1Button1" class="pointerforbuttons slide1Button1 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-black u-white u-btn-2" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="Tricolored individual LED Indicators per FootSwitch" data-lang-en="{&quot;content&quot;:&quot;<span style=\&quot;font-size: 1.5rem;\&quot;>+</span>&quot;,&quot;href&quot;:&quot;##slide1Button1&quot;}" data-lang-ru="{&quot;content&quot;:&quot;<span style=\&quot;font-size: 1.5rem;\&quot;>+</span>&quot;,&quot;href&quot;:&quot;#&quot;}">
+            <a href="##slide1Button1" class="pointerforbuttons slide1Button1 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-black u-white u-btn-2" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="Tricolored individual LED Indicators per FootSwitch" data-lang-en="{&quot;content&quot;:&quot;<span style=\&quot;font-size: 1.5rem;\&quot;>+</span>&quot;,&quot;href&quot;:&quot;##slide1Button1&quot;}" data-lang-ru="{&quot;content&quot;:&quot;<span style=\&quot;font-size: 1.5rem;\&quot;>+</span>&quot;,&quot;href&quot;:&quot;##&quot;}">
               <span style="font-size: 1.5rem;">+</span>
             </a>
             <a href="##slide1Button3" class="pointerforbuttons slide1Button3 u-btn u-btn-round u-button-style u-hover-feature u-hover-palette-3-base u-radius-50 u-text-body-color u-text-hover-white u-white u-btn-3" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="" title="Full-Aluminium Casing" data-lang-en="{&quot;content&quot;:&quot;+&quot;,&quot;href&quot;:&quot;##slide1Button3&quot;}" data-lang-ru="{&quot;content&quot;:&quot;+&quot;,&quot;href&quot;:&quot;##slide1Button3&quot;}">+</a>
@@ -571,7 +591,7 @@ borders: top right bottom left !important
       
       
     </section>
-    <section class="u-black u-clearfix u-section-4" id="sec-e57e">
+    <section class="u-black u-clearfix u-section-4" id="Features">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-align-left u-custom-font u-font-lato u-text u-text-1" data-animation-name="flipIn" data-animation-duration="4000" data-animation-direction="X" data-animation-out="0" data-animation-delay="0" data-lang-en="Fea​tures" data-lang-ru="Возможности">Fea​tures</h1>
         <div class="u-align-center u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
@@ -794,7 +814,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </div>
       </div>
     </section>
-    <section class="u-align-left u-clearfix u-gradient u-section-5" id="sec-4b88" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+    <section class="u-align-left u-clearfix u-gradient u-section-5" id="DataFacts" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-align-center u-custom-font u-font-lato u-text u-text-body-alt-color u-text-1" data-lang-en="​Data &amp;amp; Facts" data-lang-ru="Параметры"> Data &amp; Facts</h1>
         <div class="u-accordion u-align-center u-collapsed-by-default u-expanded-width u-spacing-2 u-accordion-1">
@@ -1008,12 +1028,12 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                         <tbody class="u-table-body u-table-body-8">
                           <tr style="height: 119px;">
                             <td class="u-align-center u-border-1 u-border-palette-5-dark-1 u-first-column u-table-cell u-text-body-alt-color u-table-cell-34" data-lang-en="​Operating systems (Mac)" data-lang-ru="​ОС<br>(Mac)"> Operating systems (Mac)</td>
-                            <td class="u-align-center u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-valign-middle u-text-body-alt-color u-table-cell-35" data-lang-en="​OS X 10.6 and above<br>MIDI over 5 pin(Legacy MIDI)/USB/BLE/Bluetooth Classic(​<a href=&quot;https://projectgus.github.io/hairless-midiserial/#downloads&quot; class=&quot;u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1 u-block-control&quot; style=&quot;background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-block=&quot;289&quot;>HairlessMIDI</a>)<br>" data-lang-ru="​OS X 10.6 и выше<br>MIDI по 5 pin(Legacy MIDI)/USB/BLE/Классический Bluetooth(​<a href=&quot;https://projectgus.github.io/hairless-midiserial/#downloads&quot; class=&quot;u-active-none u-btn-1 u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-lang-en=&quot;{&amp;quot;content&amp;quot;:&amp;quot;HairlessMIDI&amp;quot;,&amp;quot;href&amp;quot;:&amp;quot;https://projectgus.github.io/hairless-midiserial/#downloads&amp;quot;}&quot;>HairlessMIDI</a>)<br>"> OS X 10.6 and above<br>MIDI over 5 pin(Legacy MIDI)/USB/BLE/Bluetooth Classic( <a href="https://projectgus.github.io/hairless-midiserial/#downloads" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">HairlessMIDI</a>)<br>
+                            <td class="u-align-center u-border-1 u-border-palette-5-dark-1 u-table-cell u-table-valign-middle u-text-body-alt-color u-table-cell-35" data-lang-en="​OS X 10.6 and above<br>MIDI over 5 pin(Legacy MIDI)/USB/BLE/Bluetooth Classic(​<a href=&quot;https://projectgus.github.io/hairless-midiserial/#downloads&quot; class=&quot;u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-block-control u-btn-1&quot; style=&quot;background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-block=&quot;289&quot;>HairlessMIDI</a>)<br>" data-lang-ru="​OS X 10.6 и выше<br>MIDI по 5 pin(Legacy MIDI)/USB/BLE/Классический Bluetooth(​<a href=&quot;https://projectgus.github.io/hairless-midiserial/#downloads&quot; class=&quot;u-active-none u-btn-1 u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-lang-en=&quot;{&amp;quot;content&amp;quot;:&amp;quot;HairlessMIDI&amp;quot;,&amp;quot;href&amp;quot;:&amp;quot;https://projectgus.github.io/hairless-midiserial/#downloads&amp;quot;}&quot;>HairlessMIDI</a>)<br>"> OS X 10.6 and above<br>MIDI over 5 pin(Legacy MIDI)/USB/BLE/Bluetooth Classic( <a href="https://projectgus.github.io/hairless-midiserial/#downloads" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">HairlessMIDI</a>)<br>
                             </td>
                           </tr>
                           <tr style="height: 113px;">
                             <td class="u-align-center u-border-1 u-border-palette-5-dark-1 u-first-column u-table-cell u-text-body-alt-color u-table-cell-36" data-lang-en="​Operating systems (Windows)" data-lang-ru="ОС<br>(Windows)"> Operating systems (Windows)</td>
-                            <td class="u-align-center u-border-1 u-border-palette-5-dark-1 u-table-cell u-text-body-alt-color u-table-cell-37" data-lang-en="​Windows 10 and Above<br>​MIDI over 5 pin(Legacy MIDI)/USB/BLE/Bluetooth Classic(<a href=&quot;https://projectgus.github.io/hairless-midiserial/#downloads&quot; class=&quot;u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2 u-block-control&quot; style=&quot;background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-block=&quot;292&quot;>HairlessMIDI</a>)<br>" data-lang-ru="​Windows 10 и выше<br>​MIDI по 5 pin(Legacy MIDI)/USB/BLE/Классический Bluetooth(<a href=&quot;https://projectgus.github.io/hairless-midiserial/#downloads&quot; class=&quot;u-active-none u-btn-2 u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-lang-en=&quot;{&amp;quot;content&amp;quot;:&amp;quot;HairlessMIDI&amp;quot;,&amp;quot;href&amp;quot;:&amp;quot;https://projectgus.github.io/hairless-midiserial/#downloads&amp;quot;}&quot;>HairlessMIDI</a>)<br>"> Windows 10 and Above<br> MIDI over 5 pin(Legacy MIDI)/USB/BLE/Bluetooth Classic(<a href="https://projectgus.github.io/hairless-midiserial/#downloads" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">HairlessMIDI</a>)<br>
+                            <td class="u-align-center u-border-1 u-border-palette-5-dark-1 u-table-cell u-text-body-alt-color u-table-cell-37" data-lang-en="​Windows 10 and Above<br>​MIDI over 5 pin(Legacy MIDI)/USB/BLE/Bluetooth Classic(<a href=&quot;https://projectgus.github.io/hairless-midiserial/#downloads&quot; class=&quot;u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-block-control u-btn-2&quot; style=&quot;background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-block=&quot;292&quot;>HairlessMIDI</a>)<br>" data-lang-ru="​Windows 10 и выше<br>​MIDI по 5 pin(Legacy MIDI)/USB/BLE/Классический Bluetooth(<a href=&quot;https://projectgus.github.io/hairless-midiserial/#downloads&quot; class=&quot;u-active-none u-btn-2 u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-lang-en=&quot;{&amp;quot;content&amp;quot;:&amp;quot;HairlessMIDI&amp;quot;,&amp;quot;href&amp;quot;:&amp;quot;https://projectgus.github.io/hairless-midiserial/#downloads&amp;quot;}&quot;>HairlessMIDI</a>)<br>"> Windows 10 and Above<br> MIDI over 5 pin(Legacy MIDI)/USB/BLE/Bluetooth Classic(<a href="https://projectgus.github.io/hairless-midiserial/#downloads" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">HairlessMIDI</a>)<br>
                             </td>
                           </tr>
                           <tr style="height: 74px;">
@@ -1085,7 +1105,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2e1d"><div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
-        <p class="u-align-center u-small-text u-text u-text-variant u-text-1" data-lang-ru="<b>©<span style=&quot;font-weight: 400;&quot;>​2023, OK Rig. Все Права Защищены.</span></b>" data-lang-en="<b>©<span style=&quot;font-weight: 400;&quot;>​2023, OK Rig.&amp;nbsp;</span></b>All Rights Reserved."><b>©<span style="font-weight: 400;"> 2023, OK Rig.&nbsp;</span></b>All Rights Reserved.
+        <p class="copyright u-align-center u-small-text u-text u-text-variant u-text-1" data-lang-ru="<b><span style=&quot;font-weight: 400;&quot;>OK Rig. Все Права Защищены.</span></b>" data-lang-en="<b><span style=&quot;font-weight: 400;&quot;>OK Rig.&amp;nbsp;</span></b>All Rights Reserved."><b>
+            <span style="font-weight: 400;">OK Rig.&nbsp;</span></b>All Rights Reserved.
         </p>
       </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-a51f">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
