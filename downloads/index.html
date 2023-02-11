@@ -25,7 +25,9 @@
 		jQuery.get('/files/LoungeMax/latest_version', function(version) {
 				jQuery.get('/files/LoungeMax/latest_version_direct_link', function(url) {
 		
-				Button.innerText = "Update Panel V" + version + " · " + formatBytes(getFileSize(url), 1);	
+					var size = formatBytes(getFileSize(url), 1);
+					
+				Button.innerText = "Update Panel V" + version + " · " + "asdasdasddassadasdasd";	
 			
 					
 					
