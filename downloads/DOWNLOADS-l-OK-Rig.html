@@ -38,7 +38,7 @@
 			//Button.innerText = text ;
 			
 	var Button = document.getElementsByClassName('Lounge_Max_Manual')[0];
-	var text = Button.split("·");		
+	var text = Button.innerText.split("·");		
 			
 	Button.innerText = text[0] + "· " + formatBytes(getFileSize(Button.href), 1);;
 			
