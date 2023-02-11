@@ -15,8 +15,12 @@
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
             }, 500);
+			
+			
             let year = new Date().getFullYear();
             document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
+			
+			
             var Button = document.getElementsByClassName('Lounge_Max_Update_Panel')[0];
             jQuery.get('/files/LoungeMax/win_latest_version', function (version) {
                 jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
@@ -25,6 +29,14 @@
                     Button.innerText = text.replace(/(\r\n|\n|\r)/gm, "");
                 });
             });
+			
+			var Button = document.getElementsByClassName('Lounge_Max_Manual')[0];
+			
+			var size = formatBytes(getFileSize(Button.href), 1);
+			var text = "Lounge Max" + " · " + size;
+			
+			Button.innerText = text ;
+			
         }
         function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
         function getFileSize(url) {
@@ -235,7 +247,7 @@ borders: top right bottom left !important
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2e1d"><div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
-        <p class="copyright u-align-center u-small-text u-text u-text-variant u-text-1"><b><span style="font-weight: 400;">OK Rig. Все Права Защищены.</span></b></p>
+        <p class="Lounge_Max_Manual u-align-center u-small-text u-text u-text-variant u-text-1"><b><span style="font-weight: 400;">OK Rig. Все Права Защищены.</span></b></p>
       </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-a51f">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
