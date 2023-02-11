@@ -30,12 +30,10 @@
                 });
             });
 			
-			var Button = document.getElementsByClassName('Lounge_Max_Manual')[0];
 			
-			var size = formatBytes(getFileSize(Button.href), 1);
-			var text = "Lounge Max" + " · " + size;
+	document.getElementsByClassName('Lounge_Max_Manual')[0].innerText = "Lounge Max" + " · " + formatBytes(getFileSize(Button1.href), 1);;
 			
-			Button.innerText = text ;
+			
 			
         }
         function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
