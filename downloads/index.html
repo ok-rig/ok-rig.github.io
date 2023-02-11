@@ -24,13 +24,15 @@
 		
 		let version;
 		jQuery.get('/files/LoungeMax/latest_version', function(data) {
-		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = data;	
+			
+			version = data;
+		
 			
 });
 		
 		
 		
-		
+		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = version;	
 		
 		
 	} </script>
