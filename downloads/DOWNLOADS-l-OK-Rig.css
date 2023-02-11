@@ -341,10 +341,6 @@
   .u-section-2-1 .u-table-1 {
     margin-bottom: -10px;
   }
-
-  .u-section-2-1 .u-icon-4 {
-    padding: 0;
-  }
 }
 
 @media (max-width: 991px) {
@@ -409,10 +405,6 @@
 
   .u-section-2-1 .u-table-cell-1 {
     font-size: 0.875rem;
-  }
-
-  .u-section-2-1 .u-btn-1 {
-    font-size: 1rem;
   }
 
   .u-section-2-1 .u-table-cell-4 {

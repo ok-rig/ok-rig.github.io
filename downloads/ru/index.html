@@ -34,10 +34,8 @@
                 jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
                     var size = formatBytes(getFileSize(url), 1);
                     var text = "Update Panel V" + version + " · " + size;
-                   
-					
-					if (getLastPart(window.location.href) === "ru") {  }
-					else {  document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, ""); }
+	
+					document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
                 });
             });
 					
@@ -45,11 +43,7 @@
 			var txt2 = btn2.innerText.split("·");		
 			
 			btn2.innerText = txt2[0] + "· " + formatBytes(getFileSize(btn2.href), 1);
-			
-			
-			
-			
-			
+				
         }
 	
 	
@@ -213,13 +207,13 @@ borders: top right bottom left !important
                         </colgroup>
                         <tbody class="u-grey-90 u-table-body u-table-body-1">
                           <tr style="height: 136px;">
-                            <td class="u-align-left u-border-1 u-border-grey-dark-1 u-table-cell u-text-body-color u-table-cell-1"><span style="font-weight: 400; font-size: 0.875rem;" class="u-text-grey-50">&nbsp;<span style="font-style: italic;" class="u-text-palette-5-light-2">24 Февраля, 2023</span></span><span class="u-text-palette-5-dark-1"><span style="font-style: italic;"><br></span>​</span><span class="u-file-icon u-icon u-text-white u-icon-2" style="font-size: 3.75em; vertical-align: -12px; margin-right: 5px; margin-left: 5px"><img src="/images/220781-cff6bf9d.png" alt="" data-original-src="/images/220781.png" data-color="#000000"></span><span class="u-text-palette-5-dark-1">&nbsp;<span style="font-weight: 700; font-size: 1.5rem;" class="u-text-white">Windows</span><br><span class="u-text-palette-5-light-2">Windows 7 SP1 · 8.1 · 10 ·  11</span></span></td>
+                            <td class="u-align-left u-border-1 u-border-grey-dark-1 u-table-cell u-text-body-color u-table-cell-1"><span style="font-weight: 400; font-size: 0.875rem;" class="u-text-grey-50">&nbsp;<span style="font-style: italic;" class="u-text-palette-5-light-2">24 Февраля, 2023</span></span><span class="u-text-palette-5-dark-1"><span style="font-style: italic;"><br></span>​</span><span class="u-icon-2 u-file-icon u-icon u-text-white" style="font-size: 3.75em; vertical-align: -12px; margin-right: 5px; margin-left: 5px"><img src="/images/220781-cff6bf9d.png" alt="" data-original-src="/images/220781.png" data-color="#000000"></span><span class="u-text-palette-5-dark-1">&nbsp;<span style="font-weight: 700; font-size: 1.5rem;" class="u-text-white">Windows</span><br><span class="u-text-palette-5-light-2">Windows 7 SP1 · 8.1 · 10 ·  11</span></span></td>
                           </tr>
                           <tr style="height: 64px;">
-                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-2">​<a href="https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;export=download" target="_blank" class="external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-1" title="Загрузить" style="background-image: none; font-weight: 700; font-size: 1.125rem; font-style: normal; margin-top: 3px; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0" data-block-type="">Update Panel V1.0.0 · 180 MB</a><br><br></td>
+                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-2"><a class="Lounge_Max_Update_Panel u-active-none u-block-f947-90 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; padding: 0px; font-weight: 700; text-decoration: underline !important; font-size: 1.125rem;" href="https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;export=download" target="_blank" data-additional-class="Lounge_Max_Update_Panel" title="Загрузить">​Update Panel V1.0.0 · 180 MB<br><br></a></td>
                           </tr>
                           <tr style="height: 41px;">
-                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-3"><span style="text-decoration-style: initial !important; text-decoration-color: initial !important;"><u><a href="/files/LoungeMax/ReleaseNotes_Win_ru.txt" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-block-f947-87" style="background-image: none; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px" target="_blank">Примечания к версиям</a></u></span></td>
+                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-3"><a class="u-active-none u-block-f947-89 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; padding: 0px;" href="/files/LoungeMax/ReleaseNotes_Win.txt" target="_blank"><span style="text-decoration-style: initial !important; text-decoration-color: initial !important;"><u>Примечания к версиям</u></span></a></td>
                           </tr>
                           <tr style="height: 84px;">
                             <td class="Lounge_Max_Update_Panel u-align-left u-border-1 u-border-grey-75 u-table-cell u-table-valign-middle u-text-palette-5-base u-table-cell-4">Примечания:<br>*</td>
@@ -239,7 +233,7 @@ borders: top right bottom left !important
                         </colgroup>
                         <tbody class="u-grey-90 u-table-body u-table-body-2">
                           <tr style="height: 33px;">
-                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-1-dark-1 u-table-cell-5"><a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-icon-4" style="background-image: none; text-decoration: underline !important; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; font-size: 1rem" href="/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf" target="_blank" data-block-type="">​<span class="u-icon u-block-control u-file-icon u-text-white u-block-f947-88" data-block-type="Icon" data-block="61" style="font-size: 2.5em; vertical-align: -8px; background-image: none; margin-right: 8px" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="/images/136481-7e595216.png" alt="" data-original-src="/images/136481.png" data-color="#000000"></span>Lounge Max · 3 MB</a>&nbsp; &nbsp;</td>
+                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-1-dark-1 u-table-cell-5"><a class="Lounge_Max_Manual u-active-none u-block-f947-91 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; padding: 0px;" href="/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf" target="_blank" data-additional-class="Lounge_Max_Manual" title="Загрузить">​<span class="u-block-f947-88 u-file-icon u-icon u-text-white" style="font-size: 2.5em; vertical-align: -8px; background-image: none; margin-right: 8px" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><img src="/images/136481-7e595216.png" alt="" data-original-src="/images/136481.png" data-color="#000000"></span>Lounge Max · 3 MB</a></td>
                           </tr>
                         </tbody>
                       </table>
@@ -269,7 +263,7 @@ borders: top right bottom left !important
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2e1d"><div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
-        <p class="copyright u-align-center u-small-text u-text u-text-variant u-text-1"><b><span style="font-weight: 400;" data-block-type="">OK Rig. Все Права Защищены.</span></b></p>
+        <p class="copyright u-align-center u-small-text u-text u-text-variant u-text-1"><b><span style="font-weight: 400;">OK Rig. Все Права Защищены.</span></b></p>
       </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-a51f">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
