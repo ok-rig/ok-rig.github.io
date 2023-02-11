@@ -22,14 +22,13 @@
 		
 		var Button = document.getElementsByClassName('Lounge_Max_Update_Panel')[0];
 		
-		jQuery.get('/files/LoungeMax/latest_version', function(version) {
-				jQuery.get('/files/LoungeMax/latest_version_direct_link', function(url) {
+		jQuery.get('/files/LoungeMax/win_latest_version', function(version) {
+				jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function(url) {
 		
 					var size = formatBytes(getFileSize(url), 1);
 					var text = "Update Panel V" + version + " · " + size; 
 				Button.innerText = text.replace(/(\r\n|\n|\r)/gm, "");	
-					alert(text);
-			
+
 					
 					
 });
