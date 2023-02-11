@@ -20,21 +20,24 @@
 		document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
 	
 		
-		
+		var Button = document.getElementsByClassName('Lounge_Max_Update_Panel')[0];
 		
 		jQuery.get('/files/LoungeMax/latest_version', function(version) {
-
-		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = "Update Panel V" + version + " . ";	
-			
-});
-		
-		
-		
 				jQuery.get('/files/LoungeMax/latest_version_direct_link', function(url) {
 
-		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText + formatBytes(getFileSize(url), 1);
+		
+				Button.innerText = "Update Panel V" + version + " · " + formatBytes(getFileSize(url), 1);	
+			
+					
+					
+});
+			
 			
 });
+		
+		
+		
+
 		    
 		    
 		    
