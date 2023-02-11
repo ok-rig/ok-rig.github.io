@@ -27,7 +27,7 @@
 		
 					var size = formatBytes(getFileSize(url), 1);
 					var text = "Update Panel V" + version + " · " + size; 
-				Button.innerText = text;	
+				Button.innerText = text.replace(/(\r\n|\n|\r)/gm, "");	
 					alert(text);
 			
 					
