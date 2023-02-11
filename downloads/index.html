@@ -23,8 +23,13 @@
            //jQuery.get('/files/LoungeMax/win_latest_version', function (version) {
 			jQuery.get('https://drive.google.com/u/3/uc?id=1k29lGUwlHyi6Gjgz8yc7wNkmRl0tuyv1&export=download', function (version) {
                 jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
+			
+			
                     var size = formatBytes(getFileSize(url), 1);
                     var text = "Update Panel V" + version + " · " + size;
+			
+			alert(version);
+			alert(url);
                     document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
                 });
             });
