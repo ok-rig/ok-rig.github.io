@@ -16,6 +16,7 @@
                 document.body.classList.remove('loaded_hiding');
             }, 500);
 			
+			if (getLastPart(window.location.href) === "ru") { document.title = 'Контакты | OK Rig'}
 			
 			
 			
@@ -31,7 +32,7 @@
                     var text = "Update Panel V" + version + " · " + size;
                     document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
 					
-					if (getLastPart(window.location.href) === "ru") { alert("123")}
+					if (getLastPart(window.location.href) === "ru") {  document.getElementsByClassName('Lounge_Max_Update_Panel_ru')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, ""); }
                 });
             });
 					
@@ -202,7 +203,7 @@ borders: top right bottom left !important
                 <div class="u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-align-center u-file-icon u-icon u-icon-circle u-text-palette-1-base u-icon-1"><img src="/images/8553442-ae38861f.png" alt=""></span>
                     <h3 class="u-align-center u-text u-text-2" data-lang-en="App" data-lang-ru="Приложение">App</h3>
-                    <div class="u-expanded-width u-table u-table-responsive u-table-1">
+                    <div class="Lounge_Max_Update_Panel_ru u-expanded-width u-table u-table-responsive u-table-1">
                       <table class="u-table-entity">
                         <colgroup>
                           <col width="100%">
@@ -223,7 +224,7 @@ borders: top right bottom left !important
                               </span>
                             </td>
                           </tr>
-                          <tr style="height: 79px;">
+                          <tr style="height: 64px;">
                             <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-2" data-lang-en="​<a href=&quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&quot; target=&quot;_blank&quot; class=&quot;Lounge_Max_Update_Panel external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control u-btn-1&quot; title=&quot;Download&quot; data-additional-class=&quot;Lounge_Max_Update_Panel&quot; style=&quot;background-image: none; font-weight: 700; font-size: 1.125rem; font-style: normal; margin-top: 3px; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-block=&quot;38&quot; data-block-type=&quot;Button&quot;>Update Panel V1.0.0 · 180 MB</a><br><br>" data-lang-ru="​<a href=&quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-btn-1 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base&quot; title=&quot;Загрузить&quot; style=&quot;background-image: none; font-weight: 700; font-size: 1.125rem; font-style: normal; margin-top: 3px; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-lang-en=&quot;{&amp;quot;content&amp;quot;:&amp;quot;Update Panel V1.0.0 · 180 MB&amp;quot;,&amp;quot;href&amp;quot;:&amp;quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&amp;quot;}&quot;>Update Panel V1.0.0 · 180 MB</a><br><br>">
                               <a href="https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;export=download" target="_blank" class="Lounge_Max_Update_Panel external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-1" title="Download">Update Panel V1.0.0 · 180 MB</a>
                               <br>
@@ -247,7 +248,7 @@ borders: top right bottom left !important
                 <div class="u-align-center u-container-style u-list-item u-repeater-item">
                   <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-icon-circle u-text-palette-1-base u-icon-3"><img src="/images/6619097-41d3efc9.png" alt=""></span>
                     <h3 class="u-align-center u-text u-text-3" data-lang-en="User Manual" data-lang-ru="Руководство пользователя">User Manual</h3>
-                    <div class="u-expanded-width u-table u-table-responsive u-table-2">
+                    <div class="Lounge_Max_Update_Panel_ru u-expanded-width u-table u-table-responsive u-table-2">
                       <table class="u-table-entity">
                         <colgroup>
                           <col width="100%">
