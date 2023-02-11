@@ -15,17 +15,7 @@
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
             }, 500);
-			
-		
-		   $.ajax({
-  url: '../',
-  async: true,
-  success: function(data) {
-    var matches = data.match(/<title>(.*?)<\/title>/);
-    alert(matches[0]);
-  }   
-}); 
-		    
+				    
 		    
             let year = new Date().getFullYear();
             document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
