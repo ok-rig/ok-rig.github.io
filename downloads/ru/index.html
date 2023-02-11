@@ -16,24 +16,56 @@
         document.body.classList.remove('loaded_hiding');
       }, 500);
     
-		let year =  new Date().getFullYear();
+			let year =  new Date().getFullYear();
 		document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
 	
 		
+		var Button = document.getElementsByClassName('Lounge_Max_Update_Panel')[0];
 		
+		jQuery.get('/files/LoungeMax/latest_version', function(version) {
+				jQuery.get('/files/LoungeMax/latest_version_direct_link', function(url) {
 		
-		let version;
-		jQuery.get('/files/LoungeMax/latest_version', function(data) {
-		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = data;	
+				Button.innerText = "Update Panel V" + version + " · " + formatBytes(getFileSize(url), 1);	
+			
+					
+					
+});
+			
 			
 });
 		
 		
 		
+		    
+		    
+		    
+		    
+		    
 		
 		
-		
-	} </script>
+	} 
+	
+	
+	
+	
+	
+	
+	function formatBytes(a,b=2){if(!+a)return"0 Bytes";const c=0>b?0:b,d=Math.floor(Math.log(a)/Math.log(1024));return`${parseFloat((a/Math.pow(1024,d)).toFixed(c))} ${["Bytes","KB","MB","GB","TB","PB","EB","ZB","YB"][d]}`}
+	
+	
+	function getFileSize(url)
+{
+    var fileSize = '';
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false); // false = Synchronous
+    http.send(null); // it will stop here until this http request is complete
+    // when we are here, we already have a response, b/c we used Synchronous XHR
+    if (http.status === 200) {
+        fileSize = http.getResponseHeader('content-length');
+        console.log('fileSize = ' + fileSize);
+    }
+    return fileSize;
+} </script>
     
     <link rel="icon" href="../images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
