@@ -21,26 +21,18 @@
             document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
 			
 			
-            var Button = document.getElementsByClassName('Lounge_Max_Update_Panel')[0];
             jQuery.get('/files/LoungeMax/win_latest_version', function (version) {
                 jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
                     var size = formatBytes(getFileSize(url), 1);
                     var text = "Update Panel V" + version + " · " + size;
-                    Button.innerText = text.replace(/(\r\n|\n|\r)/gm, "");
+                    document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
                 });
             });
+					
+			var btn2 = document.getElementsByClassName('Lounge_Max_Manual')[0];
+			var txt2 = btn2.innerText.split("·");		
 			
-			//var Button = document.getElementsByClassName('Lounge_Max_Manual')[0];
-			
-			//var size = formatBytes(getFileSize(Button.href), 1);
-			//var text = "Lounge Max" + " · " + size;
-			
-			//Button.innerText = text ;
-			
-	var btn2 = document.getElementsByClassName('Lounge_Max_Manual')[0];
-	var txt2 = btn2.innerText.split("·");		
-			
-	btn2.innerText = txt2[0] + "· " + formatBytes(getFileSize(btn2.href), 1);;
+			btn2.innerText = txt2[0] + "· " + formatBytes(getFileSize(btn2.href), 1);
 			
         }
         function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
@@ -247,9 +239,7 @@ borders: top right bottom left !important
                         </colgroup>
                         <tbody class="u-grey-90 u-table-body u-table-body-2">
                           <tr style="height: 33px;">
-                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-1-dark-1 u-table-cell-5" data-lang-en="<a href=&quot;/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control Lounge_Max_Manual u-btn-3&quot; title=&quot;Download&quot; data-block=&quot;49&quot; data-block-type=&quot;Text,Button&quot; style=&quot;background-image: none; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; font-size: 1rem&quot; data-additional-class=&quot;Lounge_Max_Manual&quot;>​<span class=&quot;u-file-icon u-icon u-text-white u-block-control u-icon-4&quot; data-block=&quot;50&quot; data-block-type=&quot;Icon,BackToTop&quot; style=&quot;font-size: 2.5em; margin-right: 10px; vertical-align: -7px&quot;><img src=&quot;/images/136481-7e595216.png&quot; alt=&quot;&quot; data-original-src=&quot;/images/136481.png&quot; data-color=&quot;#000000&quot;></span>Lounge Max · 3 MB</a>" data-lang-ru="<a class=&quot;u-active-none u-block-f947-86 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding: 0px; text-decoration: underline !important;&quot; href=&quot;/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf&quot; target=&quot;_blank&quot;>​<span class=&quot;u-icon-4 u-file-icon u-icon u-text-white&quot; style=&quot;font-size: 2.5em; margin-right: 10px; vertical-align: -7px&quot;><img src=&quot;/images/136481-7e595216.png&quot; alt=&quot;&quot; data-original-src=&quot;/images/136481.png&quot; data-color=&quot;#000000&quot;></span>Lounge Max · 3 MB</a>">
-                              <a href="/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf" target="_blank" class="Lounge_Max_Manual external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-3" title="Download"><span class="u-file-icon u-icon u-text-white u-icon-4"><img src="/images/136481-7e595216.png" alt=""></span>Lounge Max · 3 MB
-                              </a>
+                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-1-dark-1 u-table-cell-5" data-lang-en="<a href=&quot;/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control Lounge_Max_Manual u-btn-3&quot; title=&quot;Download&quot; data-block=&quot;49&quot; data-block-type=&quot;Text,Button&quot; style=&quot;background-image: none; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; font-size: 1rem&quot; data-additional-class=&quot;Lounge_Max_Manual&quot;>​<span class=&quot;u-file-icon u-icon u-text-white u-block-control u-block-f947-82&quot; data-block=&quot;50&quot; data-block-type=&quot;Icon,BackToTop&quot; style=&quot;font-size: 2.5em; margin-right: 10px; vertical-align: -7px&quot;><img src=&quot;/images/136481-7e595216.png&quot; alt=&quot;&quot; data-original-src=&quot;/images/136481.png&quot; data-color=&quot;#000000&quot;></span>Lounge Max · 3 MB</a>" data-lang-ru="<a class=&quot;u-active-none u-icon-4 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding: 0px; text-decoration: underline !important;&quot; href=&quot;/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf&quot; target=&quot;_blank&quot;>​<span class=&quot;u-block-f947-82 u-file-icon u-icon u-text-white&quot; style=&quot;font-size: 2.5em; margin-right: 10px; vertical-align: -7px&quot;><img src=&quot;/images/136481-7e595216.png&quot; alt=&quot;&quot; data-original-src=&quot;/images/136481.png&quot; data-color=&quot;#000000&quot;></span>Lounge Max · 3 MB</a>"><span class="u-file-icon u-icon u-text-white u-icon-4"><img src="/images/136481-7e595216.png" alt=""></span>&nbsp;&nbsp;<a href="/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf" target="_blank" class="Lounge_Max_Manual external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-3" title="Download"> Lounge Max · 3 MB</a>
                             </td>
                           </tr>
                         </tbody>

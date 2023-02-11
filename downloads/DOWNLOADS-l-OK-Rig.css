@@ -298,17 +298,21 @@
   border-style: dashed;
 }
 
-.u-section-2-1 .u-btn-3 {
-  background-image: none;
-  text-decoration: underline !important;
-  font-size: 1rem;
-  padding: 0;
+.u-section-2-1 .u-icon-4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5em;
+  margin-right: 0;
+  vertical-align: -8px;
 }
 
-.u-section-2-1 .u-icon-4 {
-  font-size: 2.5em;
-  margin-right: 10px;
-  vertical-align: -7px;
+.u-section-2-1 .u-btn-3 {
+  background-image: none;
+  font-size: 1rem;
+  text-decoration: underline !important;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .u-block-f947-55 {
