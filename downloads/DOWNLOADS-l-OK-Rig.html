@@ -10,62 +10,35 @@
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <script> window.onload = function () {
-      document.body.classList.add('loaded_hiding');
-      window.setTimeout(function () {
-        document.body.classList.add('loaded');
-        document.body.classList.remove('loaded_hiding');
-      }, 500);
-    
-			let year =  new Date().getFullYear();
-		document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
-	
-		
-		var Button = document.getElementsByClassName('Lounge_Max_Update_Panel')[0];
-		
-		jQuery.get('/files/LoungeMax/latest_version', function(version) {
-				jQuery.get('/files/LoungeMax/latest_version_direct_link', function(url) {
-		
-				Button.innerText = "Update Panel V" + version + " · " + formatBytes(getFileSize(url), 1);	
-			
-					
-					
-});
-			
-			
-});
-		
-		
-		
-		    
-		    
-		    
-		    
-		    
-		
-		
-	} 
-	
-	
-	
-	
-	
-	
-	function formatBytes(a,b=2){if(!+a)return"0 Bytes";const c=0>b?0:b,d=Math.floor(Math.log(a)/Math.log(1024));return`${parseFloat((a/Math.pow(1024,d)).toFixed(c))} ${["Bytes","KB","MB","GB","TB","PB","EB","ZB","YB"][d]}`}
-	
-	
-	function getFileSize(url)
-{
-    var fileSize = '';
-    var http = new XMLHttpRequest();
-    http.open('HEAD', url, false); // false = Synchronous
-    http.send(null); // it will stop here until this http request is complete
-    // when we are here, we already have a response, b/c we used Synchronous XHR
-    if (http.status === 200) {
-        fileSize = http.getResponseHeader('content-length');
-        console.log('fileSize = ' + fileSize);
-    }
-    return fileSize;
-} </script>
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+            let year = new Date().getFullYear();
+            document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
+            var Button = document.getElementsByClassName('Lounge_Max_Update_Panel')[0];
+            jQuery.get('/files/LoungeMax/win_latest_version', function (version) {
+                jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
+                    var size = formatBytes(getFileSize(url), 1);
+                    var text = "Update Panel V" + version + " · " + size;
+                    Button.innerText = text.replace(/(\r\n|\n|\r)/gm, "");
+                });
+            });
+        }
+        function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
+        function getFileSize(url) {
+            var fileSize = '';
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false); // false = Synchronous
+            http.send(null); // it will stop here until this http request is complete
+            // when we are here, we already have a response, b/c we used Synchronous XHR
+            if (http.status === 200) {
+                fileSize = http.getResponseHeader('content-length');
+                console.log('fileSize = ' + fileSize);
+            }
+            return fileSize;
+        }</script>
     
     <link rel="icon" href="images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -227,15 +200,15 @@ borders: top right bottom left !important
                             </td>
                           </tr>
                           <tr style="height: 55px;">
-                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-2" data-lang-en="​<a href=&quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control u-btn-1&quot; title=&quot;Download&quot; data-block=&quot;38&quot; style=&quot;background-image: none; font-weight: 700; font-size: 1.125rem; font-style: normal; margin-top: 3px; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-block-type=&quot;Button,TableCell&quot;>Update Panel V1.0.0 · 180 MB</a><br><br>" data-lang-ru="​<a href=&quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-btn-1 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base&quot; title=&quot;Загрузить&quot; style=&quot;background-image: none; font-weight: 700; font-size: 1.125rem; font-style: normal; margin-top: 3px; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-lang-en=&quot;{&amp;quot;content&amp;quot;:&amp;quot;Update Panel V1.0.0 · 180 MB&amp;quot;,&amp;quot;href&amp;quot;:&amp;quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&amp;quot;}&quot;>Update Panel V1.0.0 · 180 MB</a><br><br>">
-                              <a href="https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;export=download" target="_blank" class="Lounge_Max_Update_Panel external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-1" title="Download">Update Panel V1.0.0&nbsp; &nbsp;·&nbsp; &nbsp;180 MB</a>
+                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-2" data-lang-en="​<a href=&quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control Lounge_Max_Update_Panel u-btn-1&quot; title=&quot;Download&quot; data-block=&quot;38&quot; style=&quot;background-image: none; font-weight: 700; font-size: 1.125rem; font-style: normal; margin-top: 3px; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-block-type=&quot;Button,TableCell&quot; data-additional-class=&quot;Lounge_Max_Update_Panel&quot;>Update Panel V1.0.0 · 180 MB</a><br><br>" data-lang-ru="​<a href=&quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-btn-1 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base&quot; title=&quot;Загрузить&quot; style=&quot;background-image: none; font-weight: 700; font-size: 1.125rem; font-style: normal; margin-top: 3px; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0&quot; data-lang-en=&quot;{&amp;quot;content&amp;quot;:&amp;quot;Update Panel V1.0.0 · 180 MB&amp;quot;,&amp;quot;href&amp;quot;:&amp;quot;https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;amp;export=download&amp;quot;}&quot;>Update Panel V1.0.0 · 180 MB</a><br><br>">
+                              <a href="https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;export=download" target="_blank" class="Lounge_Max_Update_Panel external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-1" title="Download">Update Panel V1.0.0 · 180 MB</a>
                               <br>
                               <br>
                             </td>
                           </tr>
                           <tr style="height: 41px;">
-                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-3" data-lang-en="<a class=&quot;external-link-new-window u-active-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control u-btn-2&quot; href=&quot;/files/LoungeMax/ReleaseNotes.txt&quot; target=&quot;_blank&quot; data-animation-name=&quot;&quot; data-animation-duration=&quot;0&quot; data-animation-delay=&quot;0&quot; data-animation-direction=&quot;&quot; data-block=&quot;40&quot; style=&quot;text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; font-weight: normal; font-style: normal; font-size: 1rem&quot; data-block-type=&quot;Button,ListItem&quot;>​Release Notes</a>" data-lang-ru="<a class=&quot;u-active-none u-btn-2 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding: 0px; text-decoration: underline !important;&quot; href=&quot;/files/LoungeMax/ReleaseNotes_ru.txt&quot; target=&quot;_blank&quot;>Примечания к версиям</a>">
-                              <a class="external-link-new-window u-active-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-2" href="/files/LoungeMax/ReleaseNotes.txt" target="_blank" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> Release Notes</a>
+                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-3" data-lang-en="<a class=&quot;external-link-new-window u-active-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control u-btn-2&quot; href=&quot;/files/LoungeMax/ReleaseNotes_Win.txt&quot; target=&quot;_blank&quot; data-animation-name=&quot;&quot; data-animation-duration=&quot;0&quot; data-animation-delay=&quot;0&quot; data-animation-direction=&quot;&quot; data-block=&quot;40&quot; style=&quot;text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; font-weight: normal; font-style: normal; font-size: 1rem&quot; data-block-type=&quot;Button,ListItem&quot;>​Release Notes</a>" data-lang-ru="<span style=&quot;text-decoration-style: initial !important; text-decoration-color: initial !important;&quot;><u><a href=&quot;/files/LoungeMax/ReleaseNotes_Win_ru.txt&quot; class=&quot;u-active-none u-block-f947-87 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding: 0px;&quot; target=&quot;_blank&quot;>Примечания к версиям</a></u></span>">
+                              <a class="external-link-new-window u-active-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-2" href="/files/LoungeMax/ReleaseNotes_Win.txt" target="_blank" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> Release Notes</a>
                             </td>
                           </tr>
                           <tr style="height: 84px;">
@@ -257,7 +230,7 @@ borders: top right bottom left !important
                         </colgroup>
                         <tbody class="u-grey-90 u-table-body u-table-body-2">
                           <tr style="height: 33px;">
-                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-1-dark-1 u-table-cell-5" data-lang-en="<a href=&quot;/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control u-btn-3&quot; title=&quot;Download&quot; data-block=&quot;49&quot; style=&quot;background-image: none; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; font-size: 1rem&quot;>​<span class=&quot;u-file-icon u-icon u-text-white u-block-control u-icon-4&quot; data-block=&quot;50&quot; style=&quot;font-size: 2.5em; margin-right: 10px; vertical-align: -7px&quot;><img src=&quot;/images/136481-7e595216.png&quot; alt=&quot;&quot; data-original-src=&quot;/images/136481.png&quot; data-color=&quot;#000000&quot;></span>Lounge Max · 3 MB</a>" data-lang-ru="<a class=&quot;u-active-none u-block-f947-86 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding: 0px; text-decoration: underline !important;&quot; href=&quot;/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf&quot; target=&quot;_blank&quot;>​<span class=&quot;u-icon-4 u-file-icon u-icon u-text-white&quot; style=&quot;font-size: 2.5em; margin-right: 10px; vertical-align: -7px&quot;><img src=&quot;/images/136481-7e595216.png&quot; alt=&quot;&quot; data-original-src=&quot;/images/136481.png&quot; data-color=&quot;#000000&quot;></span>Lounge Max · 3 MB</a>">
+                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-1-dark-1 u-table-cell-5" data-lang-en="<a href=&quot;/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf&quot; target=&quot;_blank&quot; class=&quot;external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-block-control u-btn-3&quot; title=&quot;Download&quot; data-block=&quot;49&quot; style=&quot;background-image: none; text-decoration: underline !important; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; font-size: 1rem&quot; data-block-type=&quot;Text,Button&quot;>​<span class=&quot;u-file-icon u-icon u-text-white u-block-control u-icon-4&quot; data-block=&quot;50&quot; style=&quot;font-size: 2.5em; margin-right: 10px; vertical-align: -7px&quot; data-block-type=&quot;Icon,BackToTop&quot;><img src=&quot;/images/136481-7e595216.png&quot; alt=&quot;&quot; data-original-src=&quot;/images/136481.png&quot; data-color=&quot;#000000&quot;></span>Lounge Max · 3 MB</a>" data-lang-ru="<a class=&quot;u-active-none u-block-f947-86 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base&quot; style=&quot;background-image: none; padding: 0px; text-decoration: underline !important;&quot; href=&quot;/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf&quot; target=&quot;_blank&quot;>​<span class=&quot;u-icon-4 u-file-icon u-icon u-text-white&quot; style=&quot;font-size: 2.5em; margin-right: 10px; vertical-align: -7px&quot;><img src=&quot;/images/136481-7e595216.png&quot; alt=&quot;&quot; data-original-src=&quot;/images/136481.png&quot; data-color=&quot;#000000&quot;></span>Lounge Max · 3 MB</a>">
                               <a href="/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf" target="_blank" class="external-link-new-window u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-dark-1 u-text-palette-1-base u-btn-3" title="Download"><span class="u-file-icon u-icon u-text-white u-icon-4"><img src="/images/136481-7e595216.png" alt=""></span>Lounge Max · 3 MB
                               </a>
                             </td>
