@@ -10,6 +10,14 @@
     <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
     <script> window.onload = function () {
+			
+			//Preloader hide
+			document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+			
 			if (getLastPart(window.location.href) === "ru") { document.title = 'Загрузки | OK Rig'}
 			
 			
@@ -26,9 +34,10 @@
                 jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
                     var size = formatBytes(getFileSize(url), 1);
                     var text = "Update Panel V" + version + " · " + size;
-                    document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
+                   
 					
-					if (getLastPart(window.location.href) === "ru") {  document.getElementsByClassName('Lounge_Max_Update_Panel_ru')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, ""); }
+					if (getLastPart(window.location.href) === "ru") {  }
+					else {  document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, ""); }
                 });
             });
 					
@@ -41,14 +50,6 @@
 			
 			
 			
-			
-			
-			//Preloader hide
-			document.body.classList.add('loaded_hiding');
-            window.setTimeout(function () {
-                document.body.classList.add('loaded');
-                document.body.classList.remove('loaded_hiding');
-            }, 500);
         }
 	
 	
