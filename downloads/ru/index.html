@@ -10,19 +10,15 @@
     <script class="u-script" type="text/javascript" src="../jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="../nicepage.js" defer=""></script>
     <script> window.onload = function () {
-            document.body.classList.add('loaded_hiding');
-            window.setTimeout(function () {
-                document.body.classList.add('loaded');
-                document.body.classList.remove('loaded_hiding');
-            }, 500);
-			
 			if (getLastPart(window.location.href) === "ru") { document.title = 'Загрузки | OK Rig'}
-			
 			
 			
 			
             let year = new Date().getFullYear();
             document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
+			
+			
+			
 			
 			
            //jQuery.get('/files/LoungeMax/win_latest_version', function (version) {
@@ -41,6 +37,18 @@
 			
 			btn2.innerText = txt2[0] + "· " + formatBytes(getFileSize(btn2.href), 1);
 			
+			
+			
+			
+			
+			
+			
+			//Preloader hide
+			document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
         }
 	
 	
