@@ -31,8 +31,8 @@
 			
 			
 			
-			document.getElementsByClassName('Lounge_Max_Update_Panel')[0].href = "#");
-		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].onclick = function () { downloadAs(url, 'newfilename'); }
+			//document.getElementsByClassName('Lounge_Max_Update_Panel')[0].href = "#");
+		
 			
                 });
             });
@@ -42,7 +42,7 @@
 			
 			btn2.innerText = txt2[0] + "· " + formatBytes(getFileSize(btn2.href), 1);
 		    
-		    
+		    document.getElementsByClassName('Lounge_Max_Update_Panel')[0].onclick = function () { downloadAs(url, 'newfilename') }
 			
         }
 	    
