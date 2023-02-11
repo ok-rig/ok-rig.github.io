@@ -340,6 +340,11 @@
   .u-section-2-1 .u-table-1 {
     margin-bottom: -4px;
   }
+
+  .u-section-2-1 .u-icon-4 {
+    text-decoration: underline !important;
+    padding: 0;
+  }
 }
 
 @media (max-width: 991px) {
