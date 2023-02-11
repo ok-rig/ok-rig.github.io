@@ -21,7 +21,8 @@
             document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
 			
 			
-            jQuery.get('/files/LoungeMax/win_latest_version', function (version) {
+           //jQuery.get('/files/LoungeMax/win_latest_version', function (version) {
+			jQuery.get('https://drive.google.com/u/3/uc?id=1k29lGUwlHyi6Gjgz8yc7wNkmRl0tuyv1&export=download', function (version) {
                 jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
                     var size = formatBytes(getFileSize(url), 1);
                     var text = "Update Panel V" + version + " · " + size;
@@ -33,18 +34,6 @@
 			var txt2 = btn2.innerText.split("·");		
 			
 			btn2.innerText = txt2[0] + "· " + formatBytes(getFileSize(btn2.href), 1);
-		    
-		    
-		    
-		    
-		             jQuery.get('https://drive.google.com/file/d/1k29lGUwlHyi6Gjgz8yc7wNkmRl0tuyv1/view?usp=share_link', function (version) {
-
-				     alert(version);
-				     
-				     
-            });   
-		    
-		    
 			
         }
         function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
