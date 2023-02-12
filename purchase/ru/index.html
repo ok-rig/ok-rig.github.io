@@ -15,7 +15,22 @@
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
       }, 500);
-    } </script>
+    
+		
+		if (getLastPart(window.location.href) === "ru") { document.title = 'Купить | OK Rig'}
+		
+		
+		
+		let year =  new Date().getFullYear();
+		document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
+	
+	}
+	
+	
+	function getLastPart(url) {
+    var parts = url.split("/");
+    return (url.lastIndexOf('/') !== url.length - 1 ? parts[parts.length - 1] : parts[parts.length - 2]);
+} </script>
     
     <link rel="icon" href="../images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -152,8 +167,8 @@ borders: top right bottom left !important
                 </div>
                 <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
                   <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-2">
-                    <a href="#" target="_blank" class="external-link-new-window u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-text-hover-palette-1-base u-btn-1" title="UA">​<span class="u-icon-1 u-file-icon u-icon" style="font-size: 3.875em; margin-right: 10px; vertical-align: -7px; margin-left: 10px; width: 62px; height: 84px"><img src="/images/4060411.png" alt="" data-original-src="/images/4060411.png" data-color=""></span>​</a>
-                    <a href="#" target="_blank" class="external-link-new-window u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-text-hover-palette-1-light-1 u-btn-2" title="eBay">​<span class="u-icon-2 u-file-icon u-icon u-text-white" style="font-size: 1.2917em; margin-right: 16px; vertical-align: -5px"><img src="/images/4111305-50c17a18.png" alt="" data-original-src="/images/4111305.png" data-color="#000000"></span>Глобально ​</a>
+                    <a href="#" target="_blank" class="external-link-new-window u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-text-hover-palette-1-base u-btn-1" title="UA">​<span class="u-file-icon u-icon u-icon-1" style="font-size: 3.875em; margin-right: 10px; vertical-align: -7px; margin-left: 10px; width: 62px; height: 84px"><img src="/images/4060411.png" alt="" data-original-src="/images/4060411.png" data-color=""></span>​</a>
+                    <a href="#" target="_blank" class="external-link-new-window u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-text-hover-palette-1-light-1 u-btn-2" title="eBay">​<span class="u-file-icon u-icon u-text-white u-icon-2" style="font-size: 1.2917em; margin-right: 16px; vertical-align: -5px"><img src="/images/4111305-50c17a18.png" alt="" data-original-src="/images/4111305.png" data-color="#000000"></span>Глобально ​</a>
                   </div>
                 </div>
               </div>
@@ -166,7 +181,7 @@ borders: top right bottom left !important
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2e1d"><div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
-        <p class="u-align-center u-small-text u-text u-text-variant u-text-1"><b>©<span style="font-weight: 400;">​2023, OK Rig. Все Права Защищены.</span></b></p>
+        <p class="copyright u-align-center u-small-text u-text u-text-variant u-text-1"><b><span style="font-weight: 400;" data-block-type="">OK Rig. Все Права Защищены.</span></b></p>
       </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-a51f">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">

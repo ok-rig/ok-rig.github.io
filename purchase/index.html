@@ -15,7 +15,22 @@
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
       }, 500);
-    } </script>
+    
+		
+		if (getLastPart(window.location.href) === "ru") { document.title = 'Купить | OK Rig'}
+		
+		
+		
+		let year =  new Date().getFullYear();
+		document.getElementsByClassName('copyright')[0].innerText = "© " + year + " " + document.getElementsByClassName('copyright')[0].innerText;
+	
+	}
+	
+	
+	function getLastPart(url) {
+    var parts = url.split("/");
+    return (url.lastIndexOf('/') !== url.length - 1 ? parts[parts.length - 1] : parts[parts.length - 2]);
+} </script>
     
     <link rel="icon" href="images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -153,14 +168,14 @@ borders: top right bottom left !important
                     <div class="u-background-effect-image u-expanded u-image u-image-contain u-shading u-image-1" data-image-width="3573" data-image-height="2782"></div>
                   </div>
                   <div class="u-container-layout u-container-layout-1">
-                    <h2 class="u-align-center u-hover-feature u-opacity u-opacity-90 u-text u-text-palette-1-light-3 u-text-1" data-lang-en="OK™&amp;nbsp;MIDI Lounge MAX" data-lang-ru="OK™&amp;nbsp;MIDI Lounge MAX">OK™&nbsp;MIDI Lounge MAX</h2>
+                    <h2 class="u-align-center u-hover-feature u-opacity u-opacity-90 u-text u-text-palette-1-light-3 u-text-1">OK™&nbsp;MIDI Lounge MAX</h2>
                   </div>
                 </div>
                 <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
                   <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-2">
-                    <a href="#" target="_blank" class="external-link-new-window u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-text-hover-palette-1-base u-btn-1" title="UA" data-lang-en="{&quot;content&quot;:&quot;​<span class=\&quot;u-file-icon u-icon u-block-control u-icon-1\&quot; data-block=\&quot;30\&quot; style=\&quot;font-size: 3.875em; margin-right: 10px; vertical-align: -7px; margin-left: 10px; width: 62px; height: 84px\&quot;><img src=\&quot;/images/4060411.png\&quot; alt=\&quot;\&quot; data-original-src=\&quot;/images/4060411.png\&quot; data-color=\&quot;\&quot;></span>​&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-ru="{&quot;content&quot;:&quot;​<span class=\&quot;u-icon-1 u-file-icon u-icon\&quot; style=\&quot;font-size: 3.875em; margin-right: 10px; vertical-align: -7px; margin-left: 10px; width: 62px; height: 84px\&quot;><img src=\&quot;/images/4060411.png\&quot; alt=\&quot;\&quot; data-original-src=\&quot;/images/4060411.png\&quot; data-color=\&quot;\&quot;></span>​&quot;,&quot;href&quot;:&quot;#&quot;}"><span class="u-file-icon u-icon u-icon-1"><img src="/images/4060411.png" alt=""></span>
+                    <a href="#" target="_blank" class="external-link-new-window u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-text-hover-palette-1-base u-btn-1" title="UA" data-lang-en="{&quot;content&quot;:&quot;​<span class=\&quot;u-file-icon u-icon u-icon-1 u-block-control\&quot; style=\&quot;font-size: 3.875em; margin-right: 10px; vertical-align: -7px; margin-left: 10px; width: 62px; height: 84px\&quot; data-block=\&quot;30\&quot;><img src=\&quot;/images/4060411.png\&quot; alt=\&quot;\&quot; data-original-src=\&quot;/images/4060411.png\&quot; data-color=\&quot;\&quot;></span>​&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-ru="{&quot;content&quot;:&quot;​<span class=\&quot;u-file-icon u-icon u-icon-1\&quot; style=\&quot;font-size: 3.875em; margin-right: 10px; vertical-align: -7px; margin-left: 10px; width: 62px; height: 84px\&quot;><img src=\&quot;/images/4060411.png\&quot; alt=\&quot;\&quot; data-original-src=\&quot;/images/4060411.png\&quot; data-color=\&quot;\&quot;></span>​&quot;,&quot;href&quot;:&quot;#&quot;}"><span class="u-file-icon u-icon u-icon-1"><img src="/images/4060411.png" alt=""></span>
                     </a>
-                    <a href="#" target="_blank" class="external-link-new-window u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-text-hover-palette-1-light-1 u-btn-2" title="eBay" data-lang-en="{&quot;content&quot;:&quot;​<span class=\&quot;u-file-icon u-icon u-text-white u-block-control u-icon-2\&quot; data-block=\&quot;32\&quot; style=\&quot;font-size: 1.2917em; margin-right: 16px; vertical-align: -5px\&quot;><img src=\&quot;/images/4111305-50c17a18.png\&quot; alt=\&quot;\&quot; data-original-src=\&quot;/images/4111305.png\&quot; data-color=\&quot;#000000\&quot;></span>Worldwide&amp;nbsp;​&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-ru="{&quot;content&quot;:&quot;​<span class=\&quot;u-icon-2 u-file-icon u-icon u-text-white\&quot; style=\&quot;font-size: 1.2917em; margin-right: 16px; vertical-align: -5px\&quot;><img src=\&quot;/images/4111305-50c17a18.png\&quot; alt=\&quot;\&quot; data-original-src=\&quot;/images/4111305.png\&quot; data-color=\&quot;#000000\&quot;></span>Глобально ​&quot;,&quot;href&quot;:&quot;#&quot;}"><span class="u-file-icon u-icon u-text-white u-icon-2"><img src="/images/4111305-50c17a18.png" alt=""></span>Worldwide&nbsp; 
+                    <a href="#" target="_blank" class="external-link-new-window u-active-none u-align-center u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-text-hover-palette-1-light-1 u-btn-2" title="eBay" data-lang-en="{&quot;content&quot;:&quot;​<span class=\&quot;u-file-icon u-icon u-text-white u-icon-2 u-block-control\&quot; style=\&quot;font-size: 1.2917em; margin-right: 16px; vertical-align: -5px\&quot; data-block=\&quot;32\&quot;><img src=\&quot;/images/4111305-50c17a18.png\&quot; alt=\&quot;\&quot; data-original-src=\&quot;/images/4111305.png\&quot; data-color=\&quot;#000000\&quot;></span>Worldwide&amp;nbsp;​&quot;,&quot;href&quot;:&quot;#&quot;}" data-lang-ru="{&quot;content&quot;:&quot;​<span class=\&quot;u-file-icon u-icon u-text-white u-icon-2\&quot; style=\&quot;font-size: 1.2917em; margin-right: 16px; vertical-align: -5px\&quot;><img src=\&quot;/images/4111305-50c17a18.png\&quot; alt=\&quot;\&quot; data-original-src=\&quot;/images/4111305.png\&quot; data-color=\&quot;#000000\&quot;></span>Глобально ​&quot;,&quot;href&quot;:&quot;#&quot;}"><span class="u-file-icon u-icon u-text-white u-icon-2"><img src="/images/4111305-50c17a18.png" alt=""></span>Worldwide&nbsp; 
                     </a>
                   </div>
                 </div>
@@ -174,7 +189,8 @@ borders: top right bottom left !important
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-2e1d"><div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
-        <p class="u-align-center u-small-text u-text u-text-variant u-text-1" data-lang-ru="<b>©<span style=&quot;font-weight: 400;&quot;>​2023, OK Rig. Все Права Защищены.</span></b>" data-lang-en="<b>©<span style=&quot;font-weight: 400;&quot;>​2023, OK Rig.&amp;nbsp;</span></b>All Rights Reserved."><b>©<span style="font-weight: 400;"> 2023, OK Rig.&nbsp;</span></b>All Rights Reserved.
+        <p class="copyright u-align-center u-small-text u-text u-text-variant u-text-1" data-lang-ru="<b><span style=&quot;font-weight: 400;&quot; data-block-type=&quot;&quot;>OK Rig. Все Права Защищены.</span></b>" data-lang-en="<b><span style=&quot;font-weight: 400;&quot; data-block-type=&quot;&quot;>OK Rig.&amp;nbsp;</span></b>All Rights Reserved."><b>
+            <span style="font-weight: 400;">OK Rig.&nbsp;</span></b>All Rights Reserved.
         </p>
       </div></footer><section class="u-align-center u-clearfix u-cookies-consent u-grey-80 u-cookies-consent" id="sec-a51f">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">

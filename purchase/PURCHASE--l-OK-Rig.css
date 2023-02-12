@@ -156,9 +156,9 @@
 }
 
 .u-section-2 .u-text-1 {
-  font-size: 3rem;
   transition-duration: 3s;
   transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  background-image: none;
   margin: 94px 13px 0;
 }
 
@@ -212,7 +212,6 @@
   }
 
   .u-section-2 .u-text-1 {
-    font-size: 2.25rem;
     margin-top: 90px;
     margin-left: 0;
     margin-right: 0;
@@ -241,7 +240,6 @@
   }
 
   .u-section-2 .u-text-1 {
-    font-size: 1.875rem;
     margin-top: 74px;
   }
 
@@ -270,7 +268,6 @@
   }
 
   .u-section-2 .u-text-1 {
-    font-size: 3rem;
     margin-top: 105px;
   }
 
@@ -294,7 +291,6 @@
   }
 
   .u-section-2 .u-text-1 {
-    font-size: 2.25rem;
     width: auto;
     margin-top: 52px;
   }
