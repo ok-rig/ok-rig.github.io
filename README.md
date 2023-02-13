@@ -1,2 +1,2 @@
-http://ok-rig.github.io
-http://okrig.mooo.com
+http://ok-rig.github.io/
+http://okrig.mooo.com/
