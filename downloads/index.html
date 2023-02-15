@@ -28,6 +28,7 @@
 			
 			
 			jQuery.get('/files/LoungeMax/win_latest_version', function (v_link) {
+				alert(v_link);
 				jQuery.get(v_link, function (version) {
 					jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
 						var size = formatBytes(getFileSize(url), 1);
