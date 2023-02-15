@@ -38804,7 +38804,19 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-top: 10px;
   }
 }
+@media (max-width: 767px) {
+  .u-header .u-menu-1 {
+    margin-top: -78px;
+    margin-right: -17px;
+    margin-bottom: 29px;
+  }
 
+  .u-header .u-file-icon-1 {
+    font-size: calc(1em + 56px);
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
 
 @media (max-width: 575px) {
   .u-header .u-sheet-1 {

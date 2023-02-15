@@ -27,17 +27,16 @@
 			
 			
 			
-			
-			
-           //jQuery.get('/files/LoungeMax/win_latest_version', function (version) {
-			jQuery.get('https://www.googleapis.com/drive/v3/files/1k29lGUwlHyi6Gjgz8yc7wNkmRl0tuyv1?alt=media&key=AIzaSyB-Cnsu2eHXmo4NAEtbQfruZffkDGmcFjc', function (version) {
-                jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
-                    var size = formatBytes(getFileSize(url), 1);
-                    var text = "Update Panel V" + version + " · " + size;
-	
-					document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
-                });
-            });
+			jQuery.get('/files/LoungeMax/win_latest_version', function (v_link) {
+				jQuery.get(v_link, function (version) {
+					jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
+						var size = formatBytes(getFileSize(url), 1);
+						var text = "Update Panel V" + version + " · " + size;
+						document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
+					});
+				});
+			]};
+			 
 					
 			var btn2 = document.getElementsByClassName('Lounge_Max_Manual')[0];
 			var txt2 = btn2.innerText.split("·");		
@@ -47,10 +46,10 @@
         }
 	
 	
-				function getLastPart(url) {
-    var parts = url.split("/");
-    return (url.lastIndexOf('/') !== url.length - 1 ? parts[parts.length - 1] : parts[parts.length - 2]);
-}
+		function getLastPart(url) {
+			var parts = url.split("/");
+			return (url.lastIndexOf('/') !== url.length - 1 ? parts[parts.length - 1] : parts[parts.length - 2]);
+		}
 			
 	
 	
@@ -66,7 +65,7 @@
                 console.log('fileSize = ' + fileSize);
             }
             return fileSize;
-        }</script>
+}</script>
     
     <link rel="icon" href="../images/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -103,7 +102,7 @@
             <a href="/" class="u-align-center-md u-align-center-sm u-align-center-xs u-image u-logo u-image-1" data-image-width="588" data-image-height="328" title="OK™Rig">
               <img src="/images/okrigblue21.png" class="u-logo-image u-logo-image-1">
             </a>
-            <nav class="u-align-right u-menu u-menu-one-level u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1" data-responsive-from="XS" data-submenu-level="on-click">
+            <nav class="u-align-right u-menu u-menu-one-level u-menu-open-right u-offcanvas u-offcanvas-shift u-menu-1" data-responsive-from="SM" data-submenu-level="on-click">
               <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
                 <a class="u-button-style u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-color u-custom-left-right-menu-spacing u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-file-icon u-nav-link u-text-palette-1-base u-file-icon-1" href="#"><img src="/images/9165425-fcc6f532.png" alt="" data-original-src="/7a1345bb81eed/9165425-fcc6f532.png" data-color="#478ac9"></a>
               </div>
@@ -209,14 +208,14 @@ borders: top right bottom left !important
                           <tr style="height: 136px;">
                             <td class="u-align-left u-border-1 u-border-grey-dark-1 u-table-cell u-text-body-color u-table-cell-1"><span style="font-weight: 400; font-size: 0.875rem;" class="u-text-grey-50">&nbsp;<span style="font-style: italic;" class="u-text-palette-5-light-2">24 Февраля, 2023</span></span><span class="u-text-palette-5-dark-1"><span style="font-style: italic;"><br></span>​</span><span class="u-icon-2 u-file-icon u-icon u-text-white" style="font-size: 3.75em; vertical-align: -12px; margin-right: 5px; margin-left: 5px"><img src="/images/220781-cff6bf9d.png" alt="" data-original-src="/images/220781.png" data-color="#000000"></span><span class="u-text-palette-5-dark-1">&nbsp;<span style="font-weight: 700; font-size: 1.5rem;" class="u-text-white">Windows</span><br><span class="u-text-palette-5-light-2">Windows 7 SP1 · 8.1 · 10 ·  11</span></span></td>
                           </tr>
-                          <tr style="height: 64px;">
-                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-2"><a class="Lounge_Max_Update_Panel u-active-none u-block-f947-90 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; padding: 0px; font-weight: 700; text-decoration: underline !important; font-size: 1.125rem;" href="#" target="_blank" data-additional-class="Lounge_Max_Update_Panel" title="Загрузить">​Update Panel V1.0.0 · 180 MB<br><br></a></td>
+                          <tr style="height: 29px;">
+                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-valign-middle u-table-cell-2"><a class="Lounge_Max_Update_Panel u-active-none u-block-f947-93 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; font-size: 1.125rem; font-weight: 700; text-decoration: underline !important; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px" href="https://drive.google.com/u/3/uc?id=1bukB4_jQHBlziY4Lkx8RIFwPV7N2S6UN&amp;export=download" target="_blank" title="Загрузить актуальную версию" data-additional-class="Lounge_Max_Update_Panel">​Update Panel V1.0.0 · 180 MB</a><br>• <a href="https://drive.google.com/drive/folders/1GgwaQVqNDphBRGVufsYDSIpp1xsvw6An?usp=sharing" class="u-active-none u-block-f947-94 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-hover-palette-2-base u-text-palette-1-base" style="background-image: none; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px">Предыдущие версии</a></td>
                           </tr>
-                          <tr style="height: 41px;">
-                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-3"><a class="u-active-none u-block-f947-89 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; padding: 0px;" href="/files/LoungeMax/ReleaseNotes_Win.txt" target="_blank"><span style="text-decoration-style: initial !important; text-decoration-color: initial !important;"><u>Примечания к версиям</u></span></a></td>
+                          <tr style="height: 43px;">
+                            <td class="u-border-2 u-border-grey-dark-1 u-border-no-bottom u-border-no-top u-table-cell u-table-cell-3"><a class="u-active-none u-block-f947-89 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px" href="/files/LoungeMax/ReleaseNotes_Win.txt" target="_blank"><span style="text-decoration-style: initial !important; text-decoration-color: initial !important;"><u>Примечания к версиям</u></span></a></td>
                           </tr>
                           <tr style="height: 84px;">
-                            <td class="Lounge_Max_Update_Panel u-align-left u-border-1 u-border-grey-75 u-table-cell u-table-valign-middle u-text-palette-5-base u-table-cell-4">Примечания:<br>*</td>
+                            <td class="Lounge_Max_Update_Panel u-align-left u-border-1 u-border-grey-75 u-table-cell u-table-valign-middle u-text-palette-5-base u-table-cell-4" title="Download latest version">Примечания:<br>*</td>
                           </tr>
                         </tbody>
                       </table>
@@ -233,7 +232,7 @@ borders: top right bottom left !important
                         </colgroup>
                         <tbody class="u-grey-90 u-table-body u-table-body-2">
                           <tr style="height: 33px;">
-                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-1-dark-1 u-table-cell-5">​<span class="u-block-f947-92 u-file-icon u-icon u-text-white" style="font-size: 2.5em; vertical-align: -8px; margin-right: 4px;"><img src="/images/136481-7e595216.png" alt="" data-original-src="/images/136481.png" data-color="#000000"></span>&nbsp;<a class="Lounge_Max_Manual u-active-none u-block-f947-91 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; padding: 0px;" href="/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf" target="_blank" data-additional-class="Lounge_Max_Manual" title="Загрузить"><span style="text-decoration: underline !important;">​L</span><span style="text-decoration: underline !important;">ounge Max · 3 MB</span></a></td>
+                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-1-dark-1 u-table-cell-5">​<span class="u-block-f947-92 u-file-icon u-icon u-text-white" style="font-size: 2.5em; vertical-align: -8px; margin-right: 4px"><img src="/images/136481-7e595216.png" alt="" data-original-src="/images/136481.png" data-color="#000000"></span>&nbsp;<a class="Lounge_Max_Manual u-active-none u-block-f947-91 u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base" style="background-image: none; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px" href="/files/LoungeMax/LOUNGE_MAX_MANUAL.pdf" target="_blank" data-additional-class="Lounge_Max_Manual" title="Загрузить"><span style="text-decoration: underline !important;">​L</span><span style="text-decoration: underline !important;">ounge Max · 3 MB</span></a></td>
                           </tr>
                         </tbody>
                       </table>

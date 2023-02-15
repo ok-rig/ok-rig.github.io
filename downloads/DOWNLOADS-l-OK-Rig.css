@@ -223,7 +223,7 @@
 }
 
 .u-section-2-1 .u-table-cell-2 {
-  line-height: 0.2;
+  line-height: 1.74;
   border-style: dotted;
 }
 
@@ -237,13 +237,18 @@
   padding: 0;
 }
 
+.u-section-2-1 .u-btn-2 {
+  background-image: none;
+  padding: 0;
+}
+
 .u-section-2-1 .u-table-cell-3 {
   line-height: 0.2;
   font-weight: 400;
   border-style: dotted;
 }
 
-.u-section-2-1 .u-btn-2 {
+.u-section-2-1 .u-btn-3 {
   text-decoration: underline !important;
   font-weight: normal;
   font-style: normal;
@@ -307,7 +312,7 @@
   text-decoration: none solid rgb(255, 255, 255);
 }
 
-.u-section-2-1 .u-btn-3 {
+.u-section-2-1 .u-btn-4 {
   background-image: none;
   font-size: 1rem;
   text-decoration: underline !important;
