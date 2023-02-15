@@ -30,7 +30,7 @@
 			jQuery.get('/files/LoungeMax/win_latest_version', function (v_link) {
 				jQuery.get(v_link, function (version) {
 					jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
-						var size = formatBytes(getFileSize(url));
+						var size = formatBytes(getFileSize(url), 0);
 						var text = "Update Panel V" + version + " · " + size;
 						document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
 					});
