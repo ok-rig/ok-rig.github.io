@@ -29,19 +29,25 @@
 			
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //update latest release date for UPDATE PANEL WIN
-            //for ru page
-			if (getLastPart(window.location.href) === "ru")
-			    jQuery.get('/files/LoungeMax/win_latest_version_date', function (raw) {
-					var date = raw.match(/ru:(.*)/);
+		    jQuery.get('/files/LoungeMax/win_latest_version_date', function (raw) {
+					var date;
+					if (getLastPart(window.location.href) === "ru") date = raw.match(/ru:(.*)/);
+					else date = raw.match(/en:(.*)/);
+				
 				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = date[1];
                 });
-            //for en page
-            else 
-                jQuery.get('/files/LoungeMax/win_latest_version_date', function (raw) {
-					var date = raw.match(/en:(.*)/);
-				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = date[1];
-			    });
 			 
+			
+			//update version and size of Update Panel for Lounge Max Win
+			jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (v) {
+                if (v.startsWith("http"))
+						jQuery.get(v, function (url) {
+								DownloadButtonWin(version)
+						});
+				else DownloadButtonWin(v);
+            });
+			
+			
 			//update size for usermanual
 			var btn2 = document.getElementsByClassName('Lounge_Max_Manual')[0];
 			var txt2 = btn2.innerText.split("·");		
@@ -52,6 +58,18 @@
 			//window.open('path' , '_blank');
 				
         }
+		
+		
+		
+	
+	
+		function DownloadButtonWin(version){
+				jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
+						var size = formatBytes(getFileSize(url), 1);
+						var text = "Update Panel V" + version + " · " + size;
+						document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
+				});
+		}
 	
 	
 		function getLastPart(url) {
@@ -59,9 +77,10 @@
 			return (url.lastIndexOf('/') !== url.length - 1 ? parts[parts.length - 1] : parts[parts.length - 2]);
 		}
 			
-	
-	
+		//convert to readable format
         function formatBytes(a, b = 2) { if (!+a) return "0 Bytes"; const c = 0 > b ? 0 : b, d = Math.floor(Math.log(a) / Math.log(1024)); return `${parseFloat((a / Math.pow(1024, d)).toFixed(c))} ${["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"][d]}` }
+		
+		
         function getFileSize(url) {
             var fileSize = '';
             var http = new XMLHttpRequest();
