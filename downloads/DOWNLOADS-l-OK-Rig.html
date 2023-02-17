@@ -31,15 +31,15 @@
             //update latest release date for UPDATE PANEL WIN
             //for ru page
 			if (getLastPart(window.location.href) === "ru")
-			    jQuery.get('https://okrig.mooo.com/files/LoungeMax/win_latest_version_date', function (date) {
-					var txt = date.exec(/\nru:(.*)\n/g);
-				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = txt;
+			    jQuery.get('/files/LoungeMax/win_latest_version_date', function (raw) {
+					var date = raw.match(/ru:(.*)/);
+				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = date[1];
                 });
             //for en page
             else 
-                jQuery.get('https://okrig.mooo.com/files/LoungeMax/win_latest_version_date', function (date) {
-					var txt = date.exec(/\nen:(.*)\n/g);
-				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = txt;
+                jQuery.get('/files/LoungeMax/win_latest_version_date', function (raw) {
+					var date = raw.match(/en:(.*)/);
+				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = date[1];
 			    });
 			 
 			//update size for usermanual
