@@ -41,8 +41,8 @@
 			//update version and size of Update Panel for Lounge Max Win
 			jQuery.get('/files/LoungeMax/win_latest_version', function (v) {
                 if (v.startsWith("http"))
-						jQuery.get(v, function (url) {
-								DownloadButtonWin(v)
+						jQuery.get(v, function (v1) {
+								DownloadButtonWin(v1)
 						});
 				else DownloadButtonWin(v);
 					
