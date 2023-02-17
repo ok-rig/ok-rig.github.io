@@ -42,7 +42,7 @@
 			jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (v) {
                 if (v.startsWith("http"))
 						jQuery.get(v, function (url) {
-								DownloadButtonWin(version)
+								DownloadButtonWin(v)
 						});
 				else DownloadButtonWin(v);
             });
