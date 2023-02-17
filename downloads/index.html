@@ -32,14 +32,16 @@
             //for ru page
 			if (getLastPart(window.location.href) === "ru")
 			    jQuery.get('https://okrig.mooo.com/files/LoungeMax/win_latest_version_date', function (date) {
-					var txt = date.exec(/\nru:(.*)\n/g);
-				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = txt;
+					var txt = /\nru:(.*)\n/g;
+					var arr = txt.exec(date);
+				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = arr;
                 });
             //for en page
             else 
                 jQuery.get('https://okrig.mooo.com/files/LoungeMax/win_latest_version_date', function (date) {
-					var txt = date.exec(/\nen:(.*)\n/g);
-				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = txt;
+					var txt = /\nen:(.*)\n/g;
+					var arr = txt.exec(date);
+				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = arr;
 			    });
 			 
 			//update size for usermanual
