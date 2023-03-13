@@ -30,12 +30,12 @@
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //update latest release date for UPDATE PANEL WIN
 		    jQuery.get('/files/LoungeMax/win_latest_version_date', function (raw) {
-					var date;
-					if (getLastPart(window.location.href) === "ru") date = raw.match(/ru:(.*)/);
-					else date = raw.match(/en:(.*)/);
+				var date;
+				if (getLastPart(window.location.href) === "ru") date = raw.match(/ru:(.*)/);
+				else date = raw.match(/en:(.*)/);
 				
-				    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = date[1];
-                });
+			    document.getElementsByClassName('u-text-palette-5-light-2')[0].innerText = date[1];
+            });
 			 
 			
 			//update version and size of Update Panel for Lounge Max Win
@@ -61,12 +61,9 @@
         }
 		
 		
-		
-	
-	
 		function DownloadButtonWin(version){
 				jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
-						var size = formatBytes(getFileSize(url), 1);
+						var size = formatBytes(getFileSize(url), 0);
 						var text = "Update Panel V" + version + " · " + size;
 						document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
 				});

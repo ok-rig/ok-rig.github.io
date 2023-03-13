@@ -315,7 +315,6 @@
 .u-section-2-1 .u-btn-4 {
   background-image: none;
   font-size: 1rem;
-  text-decoration: underline !important;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
@@ -345,6 +344,10 @@
 
   .u-section-2-1 .u-table-1 {
     margin-bottom: -10px;
+  }
+
+  .u-section-2-1 .u-btn-4 {
+    text-decoration: none solid rgb(71, 138, 201);
   }
 }
 
