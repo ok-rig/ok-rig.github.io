@@ -62,8 +62,14 @@
 		
 		
 		function DownloadButtonWin(version){
-				jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
-						var size = formatBytes(getFileSize(url), 0); size ='';
+				//OLD
+				//jQuery.get('/files/LoungeMax/win_latest_version_direct_link', function (url) {
+				//		var size = formatBytes(getFileSize(url), 0);
+				//		var text = "Update Panel V" + version + " · " + size;
+				//		document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
+				//});
+
+				jQuery.get('/files/LoungeMax/win_latest_version_size', function (size) {
 						var text = "Update Panel V" + version + " · " + size;
 						document.getElementsByClassName('Lounge_Max_Update_Panel')[0].innerText = text.replace(/(\r\n|\n|\r)/gm, "");
 				});
